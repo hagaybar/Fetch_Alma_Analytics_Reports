@@ -68,7 +68,7 @@ def fetch_rows(api_key, report_path, limit):
         if resp.status_code != 200:
             logging.error(f"Failed to fetch rows: {resp.status_code}")
             try:
-                logging.error(f"Response content: {resp.text()}")
+                logging.error(f"Response content: {resp.text}")
             except Exception as e:
                 logging.error(f"Error reading response content: {e}")
             break
@@ -121,22 +121,30 @@ def main():
     output_path = config.get('TEST_OUTPUT_PATH') if is_test and 'TEST_OUTPUT_PATH' in config else config['OUTPUT_PATH']
     log_dir = config.get('TEST_LOG_DIR') if is_test and 'TEST_LOG_DIR' in config else config['LOG_DIR']
 
+    setup_logging(log_dir)
+    logging.info(f"Started task: {args.task}")
+
+
+
 
     print(f"Using API key: {api_key}, "
           f"Report Path: {report_path}, "
           f"Output Path: {output_path}, " 
           f"Output File: {output_file}, "
           f"Output Format: {output_format}")
+    
+    logging.info(f"Task: {args.task}")
+    logging.info(f"Report path: {report_path}")
+    logging.info(f"Output file: {os.path.join(output_path, output_file)}")
+    logging.info(f"Test mode: {args.test_mode}")
 
-    setup_logging(log_dir)
-    logging.info(f"Started task: {args.task}")
 
     headers = get_report_headers(api_key, report_path)
     if not headers:
         logging.error("No headers found. Exiting.")
         return
 
-    limit = 5 if args.test_mode else 1000
+    limit = 1000
     rows = list(fetch_rows(api_key, report_path, limit))
     # use this line to generate file name with timestamp
     # out_file = generate_filename(output_path, output_file) 
