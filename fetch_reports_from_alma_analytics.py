@@ -52,18 +52,22 @@ def get_report_headers(api_key, report_path):
         logging.error(f"Error fetching headers: {e}")
         return {}
 
-def fetch_rows(api_key, report_path, limit):
+def fetch_rows(api_key, report_path, limit=1000, max_rows=None):
+    
     url = "https://api-eu.hosted.exlibrisgroup.com/almaws/v1/analytics/reports"
     headers = {"Authorization": f"apikey {api_key}", "Accept": "application/json"}
     params = {"path": unquote(report_path), "limit": str(limit)}
     token = None
+    total_yielded = 0
 
     while True:
         if token:
             params['token'] = token
+
         logging.debug(f"fetch_rows Requesting: {url}")
         logging.debug(f"fetch_rows Params: {params}")
         logging.debug(f"fetch_rows Headers: {headers}")
+
         resp = requests.get(url, headers=headers, params=params)
         if resp.status_code != 200:
             logging.error(f"Failed to fetch rows: {resp.status_code}")
@@ -72,13 +76,21 @@ def fetch_rows(api_key, report_path, limit):
             except Exception as e:
                 logging.error(f"Error reading response content: {e}")
             break
+
         xml = resp.json().get("anies", [None])[0]
         if not xml:
             break
+
         root = ET.fromstring(xml)
         ns = {'ns0': 'urn:schemas-microsoft-com:xml-analysis:rowset'}
+
         for row in root.findall('.//ns0:Row', ns):
-            yield {cell.tag.split('}')[-1]: cell.text for cell in row}
+            row_data = {cell.tag.split('}')[-1]: cell.text for cell in row}
+            yield row_data
+            total_yielded += 1
+            if max_rows and total_yielded >= max_rows:
+                logging.info(f"[TEST MODE] Reached max rows limit: {max_rows}")
+                return
         token_elem = root.find('.//ResumptionToken')
         is_finished = root.find('.//IsFinished')
         if is_finished is not None and is_finished.text == 'true':
@@ -113,6 +125,7 @@ def main():
         all_configs = json.load(f)
 
     config = all_configs[args.task]
+    max_rows = config.get('TEST_ROW_LIMIT', None) if args.test_mode else None
     api_key = os.getenv('ALMA_PROD_API_KEY')
     report_path = config['ALMA_REPORT_PATH']
     output_file = config['OUTPUT_FILE_NAME']
@@ -146,7 +159,9 @@ def main():
 
     limit = 1000
 
-    rows = list(fetch_rows(api_key, report_path, limit))
+    max_rows = config.get('TEST_ROW_LIMIT') if args.test_mode else None
+
+    rows = list(fetch_rows(api_key, report_path, limit=1000, max_rows=max_rows))
     # use this line to generate file name with timestamp
     # out_file = generate_filename(output_path, output_file) 
     out_file = os.path.join(output_path, output_file)
