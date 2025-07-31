@@ -145,6 +145,7 @@ def main():
         return
 
     limit = 1000
+
     rows = list(fetch_rows(api_key, report_path, limit))
     # use this line to generate file name with timestamp
     # out_file = generate_filename(output_path, output_file) 
