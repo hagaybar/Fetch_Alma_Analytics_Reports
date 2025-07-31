@@ -150,5 +150,4 @@ Created and maintained by the TAU Development Team – Tel Aviv University Libra
 
 This project is open-source and licensed under the MIT License.
 
-You are free to use, modify, and distribute this software under the terms of the license. See the [LICENSE](https://mit-license.org/) for full details.
-
+You are free to use, modify, and distribute this software under the terms of the license. See the <a href="https://mit-license.org/" target="_blank">LICENSE</a> for full details.
