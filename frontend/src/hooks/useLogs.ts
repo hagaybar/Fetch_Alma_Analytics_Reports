@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { logsApi } from '../api/client';
 import type { LogFile, LogContent } from '../types';
 
@@ -8,7 +8,18 @@ export function useLogs() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Track current fetch to prevent duplicate calls
+  const currentFetchRef = useRef<string | null>(null);
+
   const fetchFiles = useCallback(async (taskName: string, testMode = false) => {
+    const fetchKey = `${taskName}-${testMode}`;
+
+    // Prevent duplicate fetches for the same task/mode
+    if (currentFetchRef.current === fetchKey) {
+      return;
+    }
+    currentFetchRef.current = fetchKey;
+
     try {
       setLoading(true);
       setError(null);
@@ -19,6 +30,12 @@ export function useLogs() {
       setFiles([]);
     } finally {
       setLoading(false);
+      // Reset after a short delay to allow re-fetch if needed
+      setTimeout(() => {
+        if (currentFetchRef.current === fetchKey) {
+          currentFetchRef.current = null;
+        }
+      }, 100);
     }
   }, []);
 
