@@ -20,7 +20,10 @@ export const tasksApi = {
 export const reportsApi = {
   run: (taskName: string, testMode: boolean) =>
     api.post<Job>('/reports/run', { task_name: taskName, test_mode: testMode }).then((r) => r.data),
-  listJobs: (limit = 50) => api.get<Job[]>(`/reports/jobs?limit=${limit}`).then((r) => r.data),
+  listJobs: (limit = 50) => {
+    console.trace('listJobs called from:');
+    return api.get<Job[]>(`/reports/jobs?limit=${limit}`).then((r) => r.data);
+  },
   getJob: (jobId: string) => api.get<Job>(`/reports/jobs/${jobId}`).then((r) => r.data),
   cancelJob: (jobId: string) => api.post(`/reports/jobs/${jobId}/cancel`),
 };

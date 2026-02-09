@@ -8,39 +8,62 @@ export function useJobs(autoRefresh = true, refreshInterval = 2000) {
   const [error, setError] = useState<string | null>(null);
   const intervalRef = useRef<number | null>(null);
   const jobsRef = useRef<Job[]>([]);
+  const mountedRef = useRef(true);
+  const fetchingRef = useRef(false);
 
   // Keep ref in sync with state to access latest value in interval callback
   jobsRef.current = jobs;
 
   const fetchJobs = useCallback(async () => {
+    // Prevent concurrent fetches
+    if (fetchingRef.current || !mountedRef.current) {
+      return;
+    }
+    fetchingRef.current = true;
+
     try {
       setError(null);
       const data = await reportsApi.listJobs();
-      setJobs(data);
+      if (mountedRef.current) {
+        setJobs(data);
+      }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to fetch jobs');
+      if (mountedRef.current) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch jobs');
+      }
     } finally {
-      setLoading(false);
+      fetchingRef.current = false;
+      if (mountedRef.current) {
+        setLoading(false);
+      }
     }
   }, []);
 
   useEffect(() => {
+    mountedRef.current = true;
     fetchJobs();
 
     if (autoRefresh) {
+      // Clear any existing interval first
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+
       intervalRef.current = window.setInterval(() => {
         const hasActiveJobs = jobsRef.current.some(
           (j) => j.status === 'pending' || j.status === 'running'
         );
-        if (hasActiveJobs) {
+        if (hasActiveJobs && mountedRef.current) {
           fetchJobs();
         }
       }, refreshInterval);
     }
 
     return () => {
+      mountedRef.current = false;
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
+        intervalRef.current = null;
       }
     };
   }, [fetchJobs, autoRefresh, refreshInterval]);
