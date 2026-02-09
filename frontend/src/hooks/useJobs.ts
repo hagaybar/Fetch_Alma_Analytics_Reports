@@ -7,6 +7,10 @@ export function useJobs(autoRefresh = true, refreshInterval = 2000) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const intervalRef = useRef<number | null>(null);
+  const jobsRef = useRef<Job[]>([]);
+
+  // Keep ref in sync with state to access latest value in interval callback
+  jobsRef.current = jobs;
 
   const fetchJobs = useCallback(async () => {
     try {
@@ -25,7 +29,7 @@ export function useJobs(autoRefresh = true, refreshInterval = 2000) {
 
     if (autoRefresh) {
       intervalRef.current = window.setInterval(() => {
-        const hasActiveJobs = jobs.some(
+        const hasActiveJobs = jobsRef.current.some(
           (j) => j.status === 'pending' || j.status === 'running'
         );
         if (hasActiveJobs) {
@@ -39,7 +43,7 @@ export function useJobs(autoRefresh = true, refreshInterval = 2000) {
         clearInterval(intervalRef.current);
       }
     };
-  }, [fetchJobs, autoRefresh, refreshInterval, jobs]);
+  }, [fetchJobs, autoRefresh, refreshInterval]);
 
   const runReport = async (taskName: string, testMode: boolean) => {
     const job = await reportsApi.run(taskName, testMode);

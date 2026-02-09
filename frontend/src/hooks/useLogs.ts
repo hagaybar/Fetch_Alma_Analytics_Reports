@@ -39,7 +39,7 @@ export function useLogs() {
     []
   );
 
-  const clearContent = () => setContent(null);
+  const clearContent = useCallback(() => setContent(null), []);
 
   return {
     files,
