@@ -7,12 +7,14 @@ from core.config_manager import ConfigManager
 from core.job_manager import JobManager
 from api.routes import tasks, reports, logs
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 CONFIG_PATH = os.environ.get(
     "REPORTS_CONFIG_PATH",
-    os.path.join(os.path.dirname(os.path.dirname(__file__)), "reports_config.json")
+    os.path.join(BASE_DIR, "reports_config.json")
 )
 
-FRONTEND_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "frontend", "dist")
+FRONTEND_DIR = os.path.join(BASE_DIR, "frontend", "dist")
 
 config_manager = ConfigManager(CONFIG_PATH)
 job_manager = JobManager()
