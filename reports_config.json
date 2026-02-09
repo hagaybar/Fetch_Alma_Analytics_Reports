@@ -120,7 +120,7 @@
     "TEST_ROW_LIMIT": 25
   },
   "AAM_titles": {
-    "ALMA_REPORT_PATH": "%2Fshared%2FTel%20Aviv%20University%2FReports%2FMasedet%2FAAS%20Titles#resultsTab19c2dc049e6",
+    "ALMA_REPORT_PATH": "%2Fshared%2FTel%20Aviv%20University%2FReports%2FMasedet%2FAAM%20Titles",
     "OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\Titles",
     "OUTPUT_FILE_NAME": "AAM_title.tsv",
     "OUTPUT_FORMAT": "tsv",
