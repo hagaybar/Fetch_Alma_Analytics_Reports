@@ -19,7 +19,7 @@ class LogContent(BaseModel):
 
 
 def get_log_dirs() -> dict:
-    from ...main import config_manager
+    from main import config_manager
     tasks = config_manager.list_tasks()
     log_dirs = {}
     for task in tasks:

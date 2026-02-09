@@ -1,7 +1,7 @@
 import json
 import os
 from typing import Dict, List, Optional
-from ..models.task import Task, TaskCreate, TaskUpdate
+from models.task import Task, TaskCreate, TaskUpdate
 
 
 class ConfigManager:

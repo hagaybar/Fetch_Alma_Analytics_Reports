@@ -1,13 +1,13 @@
 from fastapi import APIRouter, HTTPException, Depends
 from typing import List
-from ...models.task import Task, TaskCreate, TaskUpdate
-from ...core.config_manager import ConfigManager
+from models.task import Task, TaskCreate, TaskUpdate
+from core.config_manager import ConfigManager
 
 router = APIRouter(prefix="/tasks", tags=["tasks"])
 
 
 def get_config_manager() -> ConfigManager:
-    from ...main import config_manager
+    from main import config_manager
     return config_manager
 
 

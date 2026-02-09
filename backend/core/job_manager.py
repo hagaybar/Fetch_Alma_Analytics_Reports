@@ -1,7 +1,7 @@
 import uuid
 from datetime import datetime
 from typing import Dict, List, Optional
-from ..models.job import Job, JobStatus
+from models.job import Job, JobStatus
 
 
 class JobManager:

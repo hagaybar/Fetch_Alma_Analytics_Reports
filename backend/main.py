@@ -3,9 +3,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from .core.config_manager import ConfigManager
-from .core.job_manager import JobManager
-from .api.routes import tasks, reports, logs
+from core.config_manager import ConfigManager
+from core.job_manager import JobManager
+from api.routes import tasks, reports, logs
 
 CONFIG_PATH = os.environ.get(
     "REPORTS_CONFIG_PATH",

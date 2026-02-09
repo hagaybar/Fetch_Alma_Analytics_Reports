@@ -3,21 +3,21 @@ import logging
 import datetime
 from fastapi import APIRouter, HTTPException, BackgroundTasks, Depends
 from typing import List
-from ...models.job import Job, JobCreate, JobStatus
-from ...core.config_manager import ConfigManager
-from ...core.job_manager import JobManager
-from ...core.alma_fetcher import AlmaFetcher
+from models.job import Job, JobCreate, JobStatus
+from core.config_manager import ConfigManager
+from core.job_manager import JobManager
+from core.alma_fetcher import AlmaFetcher
 
 router = APIRouter(prefix="/reports", tags=["reports"])
 
 
 def get_config_manager() -> ConfigManager:
-    from ...main import config_manager
+    from main import config_manager
     return config_manager
 
 
 def get_job_manager() -> JobManager:
-    from ...main import job_manager
+    from main import job_manager
     return job_manager
 
 
