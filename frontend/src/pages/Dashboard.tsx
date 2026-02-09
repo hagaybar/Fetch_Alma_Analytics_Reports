@@ -30,8 +30,9 @@ export function Dashboard() {
         }}
       />
 
-      <div className="p-6">
-        <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="p-10">
+        <h2 className="text-lg font-medium text-[hsl(var(--muted-foreground))] mb-4">Overview</h2>
+        <div className="mb-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (
             <Card key={stat.label}>
               <CardContent className="flex items-center gap-4 p-6">
@@ -39,7 +40,7 @@ export function Dashboard() {
                   <stat.icon className="h-6 w-6" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold">{stat.value}</p>
+                  <p className="text-4xl font-bold">{stat.value}</p>
                   <p className="text-sm text-[hsl(var(--muted-foreground))]">{stat.label}</p>
                 </div>
               </CardContent>

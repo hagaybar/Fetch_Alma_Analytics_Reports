@@ -5,9 +5,11 @@ export function MainLayout() {
   return (
     <div className="min-h-screen bg-[hsl(var(--background))]">
       <Sidebar />
-      <main className="ml-64 min-h-screen">
-        <Outlet />
-      </main>
+      <div className="min-h-screen" style={{ marginLeft: '16rem' }}>
+        <main>
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 }

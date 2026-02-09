@@ -71,6 +71,7 @@ export function TasksPage() {
     <div>
       <Header
         title="Tasks"
+        description="Manage your Alma Analytics report tasks"
         onRefresh={fetchTasks}
         actions={
           <Button onClick={handleCreate}>
@@ -80,7 +81,7 @@ export function TasksPage() {
         }
       />
 
-      <div className="p-6">
+      <div className="p-10">
         <TaskList
           tasks={tasks}
           loading={loading}

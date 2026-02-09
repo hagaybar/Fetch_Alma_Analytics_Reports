@@ -295,6 +295,9 @@ Thumbs.db
 *.swo
 *~
 
+# Babysitter orchestration
+.a5c/
+
 # OS generated files
 *.tmp
 *.temp
