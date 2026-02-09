@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Header } from '../components/layout/Header';
 import { Card, CardHeader, CardTitle, CardContent } from '../components/ui/Card';
@@ -15,6 +15,9 @@ export function LogsPage() {
   const [selectedFile, setSelectedFile] = useState<string | null>(null);
   const [testMode, setTestMode] = useState(false);
 
+  // Track the last fetched combination to prevent duplicate fetches
+  const lastFetchRef = useRef<string>('');
+
   const taskOptions = [
     { value: '', label: 'Select a task...' },
     ...tasks.map((t) => ({ value: t.name, label: t.name })),
@@ -22,9 +25,17 @@ export function LogsPage() {
 
   useEffect(() => {
     if (selectedTask) {
-      fetchFiles(selectedTask, testMode);
-      setSelectedFile(null);
-      clearContent();
+      const fetchKey = `${selectedTask}-${testMode}`;
+
+      // Only fetch if the task/mode combination changed
+      if (lastFetchRef.current !== fetchKey) {
+        lastFetchRef.current = fetchKey;
+        fetchFiles(selectedTask, testMode);
+        setSelectedFile(null);
+        clearContent();
+      }
+    } else {
+      lastFetchRef.current = '';
     }
   }, [selectedTask, testMode, fetchFiles, clearContent]);
 
