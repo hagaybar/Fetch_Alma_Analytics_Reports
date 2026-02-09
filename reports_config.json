@@ -1,14 +1,4 @@
 {
-  "test_loans": {
-    "ALMA_REPORT_PATH": "%2Fshared%2FTel%20Aviv%20University%2FReports%2FMasedet%2FAAS%20Course%20Reserves",
-    "OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\Loans\\tst",
-    "OUTPUT_FILE_NAME": "loans_test.xlsx",
-    "OUTPUT_FORMAT": "xlsx",
-    "LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\tests",
-    "TEST_OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\tests",
-    "TEST_LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\tests",
-    "TEST_ROW_LIMIT": 25
-  },
   "aas_loans": {
     "ALMA_REPORT_PATH": "%2Fshared%2FTel%20Aviv%20University%2FReports%2FMasedet%2FAAS%20Loans",
     "OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\Loans\\AAS",
@@ -105,16 +95,6 @@
     "OUTPUT_FILE_NAME": "funds of POlines tsv.csv",
     "OUTPUT_FORMAT": "tsv",
     "LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\funds of POlines",
-    "TEST_OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\tests",
-    "TEST_LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\tests",
-    "TEST_ROW_LIMIT": 25
-  },
-  "library_sort": {
-    "ALMA_REPORT_PATH": "%2Fshared%2FTel%20Aviv%20University%2FReports%2FAS1%2FCataloging%2FLibrary%20sort",
-    "OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\Titles",
-    "OUTPUT_FILE_NAME": "library_sort.csv",
-    "OUTPUT_FORMAT": "csv",
-    "LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\Library_Sort",
     "TEST_OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\tests",
     "TEST_LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\tests",
     "TEST_ROW_LIMIT": 25
