@@ -49,7 +49,7 @@ if not exist "frontend\dist" (
 echo Frontend built
 
 REM Parse port argument
-set PORT=8000
+set PORT=8001
 if not "%1"=="" set PORT=%1
 
 echo.
