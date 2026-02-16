@@ -32,7 +32,8 @@ class ConfigManager:
             log_dir=data.get("LOG_DIR", ""),
             test_output_path=data.get("TEST_OUTPUT_PATH"),
             test_log_dir=data.get("TEST_LOG_DIR"),
-            test_row_limit=data.get("TEST_ROW_LIMIT", 25)
+            test_row_limit=data.get("TEST_ROW_LIMIT", 25),
+            frequency=data.get("FREQUENCY", "daily")
         )
 
     def _task_to_dict(self, task: Task | TaskCreate | TaskUpdate) -> Dict:
@@ -42,7 +43,8 @@ class ConfigManager:
             "OUTPUT_FILE_NAME": task.output_file_name,
             "OUTPUT_FORMAT": task.output_format,
             "LOG_DIR": task.log_dir,
-            "TEST_ROW_LIMIT": task.test_row_limit
+            "TEST_ROW_LIMIT": task.test_row_limit,
+            "FREQUENCY": task.frequency if task.frequency else "daily"
         }
         if task.test_output_path:
             result["TEST_OUTPUT_PATH"] = task.test_output_path

@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Literal, Optional
 
 
 class TaskBase(BaseModel):
@@ -11,6 +11,7 @@ class TaskBase(BaseModel):
     test_output_path: Optional[str] = None
     test_log_dir: Optional[str] = None
     test_row_limit: int = 25
+    frequency: Optional[Literal["daily", "weekly"]] = "daily"
 
 
 class TaskCreate(TaskBase):
