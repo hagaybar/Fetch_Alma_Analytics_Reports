@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Play, Edit2, Trash2, FileText, TestTube, MoreVertical } from 'lucide-react';
+import { Play, Edit2, Trash2, FileText, TestTube, MoreVertical, Calendar } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
@@ -39,7 +39,13 @@ export function TaskCard({ task, onEdit, onDelete, onRun, onViewLogs }: TaskCard
       <CardHeader className="pb-4">
         <div className="flex items-start justify-between">
           <CardTitle className="text-lg font-semibold">{task.name}</CardTitle>
-          <Badge variant="outline">{formatBadge}</Badge>
+          <div className="flex gap-2">
+            <Badge variant="secondary" className="flex items-center gap-1">
+              <Calendar className="h-3 w-3" />
+              {task.frequency || 'daily'}
+            </Badge>
+            <Badge variant="outline">{formatBadge}</Badge>
+          </div>
         </div>
       </CardHeader>
       <CardContent className="flex-1 space-y-3 text-sm text-[hsl(var(--muted-foreground))]">

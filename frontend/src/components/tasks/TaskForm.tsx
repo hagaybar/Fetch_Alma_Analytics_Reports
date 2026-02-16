@@ -18,6 +18,11 @@ const formatOptions = [
   { value: 'tsv', label: 'TSV' },
 ];
 
+const frequencyOptions = [
+  { value: 'daily', label: 'Daily' },
+  { value: 'weekly', label: 'Weekly' },
+];
+
 const defaultValues: TaskCreate = {
   name: '',
   alma_report_path: '',
@@ -28,6 +33,7 @@ const defaultValues: TaskCreate = {
   test_output_path: '',
   test_log_dir: '',
   test_row_limit: 25,
+  frequency: 'daily',
 };
 
 export function TaskForm({ isOpen, onClose, onSubmit, task }: TaskFormProps) {
@@ -49,6 +55,7 @@ export function TaskForm({ isOpen, onClose, onSubmit, task }: TaskFormProps) {
         test_output_path: task.test_output_path || '',
         test_log_dir: task.test_log_dir || '',
         test_row_limit: task.test_row_limit,
+        frequency: task.frequency || 'daily',
       });
     } else {
       setFormData(defaultValues);
@@ -148,12 +155,18 @@ export function TaskForm({ isOpen, onClose, onSubmit, task }: TaskFormProps) {
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           <Select
             label="Output Format"
             value={formData.output_format}
             onChange={(e) => handleChange('output_format', e.target.value)}
             options={formatOptions}
+          />
+          <Select
+            label="Frequency"
+            value={formData.frequency || 'daily'}
+            onChange={(e) => handleChange('frequency', e.target.value)}
+            options={frequencyOptions}
           />
           <Input
             label="Log Directory"
