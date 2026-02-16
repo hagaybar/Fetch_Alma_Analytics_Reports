@@ -11,11 +11,48 @@ import requests
 from urllib.parse import unquote
 
 
-def setup_logging(log_dir):
-    os.makedirs(log_dir, exist_ok=True)
-    log_filename = os.path.join(log_dir, f"download_analytics_log_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
-    logging.basicConfig(filename=log_filename, level=logging.DEBUG,
-                        format='%(asctime)s - %(levelname)s - %(message)s')
+def setup_logging(log_dir, task_name=""):
+    """
+    Set up logging for a task. Creates a new log file for each task.
+    Falls back to console logging if file logging fails.
+
+    Args:
+        log_dir: Directory for log files
+        task_name: Name of the task (for error messages)
+
+    Returns:
+        str: Path to the log file, or None if file logging failed
+    """
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
+
+    # Remove any existing handlers (important for batch mode)
+    for handler in logger.handlers[:]:
+        handler.close()
+        logger.removeHandler(handler)
+
+    # Always add console handler as fallback
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+    logger.addHandler(console_handler)
+
+    # Try to set up file logging
+    log_filename = None
+    try:
+        os.makedirs(log_dir, exist_ok=True)
+        log_filename = os.path.join(log_dir, f"download_analytics_log_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+        file_handler = logging.FileHandler(log_filename, encoding='utf-8')
+        file_handler.setLevel(logging.DEBUG)
+        file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+        logger.addHandler(file_handler)
+        print(f"Logging to: {log_filename}")
+    except Exception as e:
+        print(f"WARNING: Could not create log file in '{log_dir}': {e}")
+        print(f"Task '{task_name}' will only log to console.")
+        log_filename = None
+
+    return log_filename
 
 def generate_filename(output_path, output_file_name):
     '''
@@ -134,9 +171,9 @@ def run_single_report(task_name, config, args, api_key):
         output_format = config.get('OUTPUT_FORMAT', 'xlsx').lower()
         is_test = args.test_mode
         output_path = config.get('TEST_OUTPUT_PATH') if is_test and 'TEST_OUTPUT_PATH' in config else config['OUTPUT_PATH']
-        log_dir = config.get('TEST_LOG_DIR') if is_test and 'TEST_LOG_DIR' in config else config['LOG_DIR']
+        log_dir = config.get('TEST_LOG_DIR') if is_test and 'TEST_LOG_DIR' in config else config.get('LOG_DIR', '')
 
-        setup_logging(log_dir)
+        log_file = setup_logging(log_dir, task_name)
         logging.info(f"Started task: {task_name}")
 
         print(f"Running task: {task_name}")
