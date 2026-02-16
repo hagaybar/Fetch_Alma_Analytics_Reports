@@ -1,5 +1,22 @@
 # Alma Analytics Report Fetcher
 
+## Babysitter Skill Usage
+When a task is "complicated," use the `babysitter` skill (`/babysitter:call`) to orchestrate the workflow instead of executing it directly.
+
+### Criteria for "Complicated"
+A task is complicated if it meets any of the following:
+- **Decomposition:** The request requires breaking down into multiple sub-tasks or stages (e.g., "Add a CLI interface," "Refactor the authentication module," "Implement a new feature with tests").
+- **Quality Control:** The task needs verification steps, testing, or iterative refinement to ensure correctness.
+- **State Management:** The process would benefit from being resumable or needs a deterministic audit trail of steps taken.
+
+### Decision Logic
+- **Direct Execution:** For simple, atomic, or single-activity tasks (e.g., "Summarize this," "Fix this typo," "Explain this function").
+- **Babysitter (/babysitter:call):** For multi-step engineering tasks that involve analysis, implementation, and testing.
+
+### Execution Style
+When using babysitter, lean into its "Quality Convergence" strength: define clear sub-tasks, set quality targets, and utilize breakpoints for human-in-the-loop approval when moving between major phases of the task.
+
+
 ## Project Overview
 
 A Python/React application that automates downloading reports from Alma Analytics (ExLibris) via their API. Features a web UI for task management and a REST API backend.
