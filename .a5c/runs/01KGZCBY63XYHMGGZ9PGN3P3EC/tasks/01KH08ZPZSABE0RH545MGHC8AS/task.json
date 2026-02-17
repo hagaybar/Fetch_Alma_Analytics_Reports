@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH08ZPZSABE0RH545MGHC8AS",
+  "taskId": "verify-ui",
+  "invocationKey": "ui-redesign:S000007:verify-ui",
+  "stepId": "S000007",
+  "kind": "agent",
+  "title": "Verify UI changes work correctly",
+  "io": {
+    "inputJsonPath": "tasks/01KH08ZPZSABE0RH545MGHC8AS/input.json",
+    "outputJsonPath": "tasks/01KH08ZPZSABE0RH545MGHC8AS/result.json"
+  },
+  "inputs": {
+    "changes": {}
+  }
+}

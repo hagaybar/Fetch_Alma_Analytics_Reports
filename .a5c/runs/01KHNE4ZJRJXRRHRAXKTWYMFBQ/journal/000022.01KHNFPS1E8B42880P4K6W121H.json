@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T09:43:06.031Z",
+  "data": {
+    "effectId": "01KHNFPS13T9V74P37P1AWZJBY",
+    "invocationKey": "ui-redesign:S000011:visual-verification",
+    "invocationHash": "0d80179ddf4d110ff528a12390346a3a8dc5c1416201c1334838c9e6d99cf8da",
+    "stepId": "S000011",
+    "taskId": "visual-verification",
+    "kind": "agent",
+    "label": "Visual Verification (Iteration 1)",
+    "taskDefRef": "tasks/01KHNFPS13T9V74P37P1AWZJBY/task.json"
+  },
+  "checksum": "8b83cb361890fbb7fd96633fcda7348ea379c66d142acc32860f73c529359450"
+}

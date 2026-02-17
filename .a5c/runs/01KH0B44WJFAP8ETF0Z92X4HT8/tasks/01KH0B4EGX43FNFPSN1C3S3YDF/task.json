@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH0B4EGX43FNFPSN1C3S3YDF",
+  "taskId": "update-theme",
+  "invocationKey": "ui-theme-redesign:S000001:update-theme",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Update color palette to Soft & Warm theme",
+  "io": {
+    "inputJsonPath": "tasks/01KH0B4EGX43FNFPSN1C3S3YDF/input.json",
+    "outputJsonPath": "tasks/01KH0B4EGX43FNFPSN1C3S3YDF/result.json"
+  },
+  "inputs": {}
+}

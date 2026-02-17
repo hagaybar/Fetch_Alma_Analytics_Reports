@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH0AN607X82MSPHQB91WPWZQ",
+  "taskId": "verify-visual",
+  "invocationKey": "fix-sidebar-overflow:S000002:verify-visual",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Verify fix visually in browser",
+  "io": {
+    "inputJsonPath": "tasks/01KH0AN607X82MSPHQB91WPWZQ/input.json",
+    "outputJsonPath": "tasks/01KH0AN607X82MSPHQB91WPWZQ/result.json"
+  },
+  "inputs": {}
+}

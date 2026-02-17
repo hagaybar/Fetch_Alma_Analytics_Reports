@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH08T9J8ZVNCVMFFASX9Y7KN",
+  "taskId": "fix-sidebar",
+  "invocationKey": "ui-redesign:S000003:fix-sidebar",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Fix sidebar overflow issue",
+  "io": {
+    "inputJsonPath": "tasks/01KH08T9J8ZVNCVMFFASX9Y7KN/input.json",
+    "outputJsonPath": "tasks/01KH08T9J8ZVNCVMFFASX9Y7KN/result.json"
+  },
+  "inputs": {}
+}

@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-02-09T04:29:41.689Z",
+  "data": {
+    "runId": "01KH0AK5D1WP55E2D5NRREJ57K",
+    "processId": "fix-sidebar-overflow",
+    "entrypoint": {
+      "importPath": "../../processes/fix-sidebar-overflow.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "31607c96d7783cb6d6d8aee6a90d280980e9c57c46585f0f789dbc2e4df99f3c"
+}

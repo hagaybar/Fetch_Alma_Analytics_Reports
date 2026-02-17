@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHKMG1GE1BZB1TMWFYEXXBHG",
+  "taskId": "update-reports-config",
+  "invocationKey": "batch-scheduling-feature:S000003:update-reports-config",
+  "status": "ok",
+  "result": {
+    "changes": "Added FREQUENCY field to all 11 reports in reports_config.json. Daily reports (aas_loans, aas_course_reserves) received daily. Weekly reports received weekly.",
+    "reportsUpdated": 11,
+    "success": true
+  },
+  "startedAt": "2026-02-16T16:29:33.294Z",
+  "finishedAt": "2026-02-16T16:29:33.294Z",
+  "value": {
+    "changes": "Added FREQUENCY field to all 11 reports in reports_config.json. Daily reports (aas_loans, aas_course_reserves) received daily. Weekly reports received weekly.",
+    "reportsUpdated": 11,
+    "success": true
+  }
+}

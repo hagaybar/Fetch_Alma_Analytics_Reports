@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-02-16T16:23:11.549Z",
+  "data": {
+    "runId": "01KHKM6MX88D0Q0ZDRVGR1V0VW",
+    "processId": "batch-scheduling-feature",
+    "entrypoint": {
+      "importPath": "../../processes/batch-scheduling-feature.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "1b3e1af30f2d18ef54881c36ec1cef7d24f530678193c74f4f477fc38460a347"
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHKMSF8GK7MMB7MVGK9JY13D",
+  "taskId": "verify-implementation",
+  "invocationKey": "batch-scheduling-feature:S000006:verify-implementation",
+  "status": "ok",
+  "result": {
+    "checks": {
+      "backend/core/config_manager.py": {
+        "reads_frequency": true,
+        "status": "pass",
+        "syntax_check": "passed",
+        "writes_frequency": true
+      },
+      "backend/models/task.py": {
+        "frequency_field": "present",
+        "status": "pass",
+        "syntax_check": "passed"
+      },
+      "fetch_reports_from_alma_analytics.py": {
+        "batch_execution": true,
+        "report_type_argument": true,
+        "status": "pass",
+        "syntax_check": "passed"
+      },
+      "reports_config.json": {
+        "daily_count": 2,
+        "status": "pass",
+        "total_reports": 11,
+        "weekly_count": 9
+      }
+    },
+    "issues": [],
+    "success": true
+  },
+  "startedAt": "2026-02-16T16:34:12.326Z",
+  "finishedAt": "2026-02-16T16:34:12.326Z",
+  "value": {
+    "checks": {
+      "backend/core/config_manager.py": {
+        "reads_frequency": true,
+        "status": "pass",
+        "syntax_check": "passed",
+        "writes_frequency": true
+      },
+      "backend/models/task.py": {
+        "frequency_field": "present",
+        "status": "pass",
+        "syntax_check": "passed"
+      },
+      "fetch_reports_from_alma_analytics.py": {
+        "batch_execution": true,
+        "report_type_argument": true,
+        "status": "pass",
+        "syntax_check": "passed"
+      },
+      "reports_config.json": {
+        "daily_count": 2,
+        "status": "pass",
+        "total_reports": 11,
+        "weekly_count": 9
+      }
+    },
+    "issues": [],
+    "success": true
+  }
+}

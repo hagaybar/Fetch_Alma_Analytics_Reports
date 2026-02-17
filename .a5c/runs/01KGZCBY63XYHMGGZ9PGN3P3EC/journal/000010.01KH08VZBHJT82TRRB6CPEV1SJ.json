@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-09T03:59:33.233Z",
+  "data": {
+    "effectId": "01KH08VZBA4JGATFNN364QDQER",
+    "invocationKey": "ui-redesign:S000006:redesign-pages",
+    "invocationHash": "b1d17739f3889867d14005a1580c1982bbf872ca42d699d33fa916bbd666cd13",
+    "stepId": "S000006",
+    "taskId": "redesign-pages",
+    "kind": "agent",
+    "label": "Redesign page layouts",
+    "taskDefRef": "tasks/01KH08VZBA4JGATFNN364QDQER/task.json"
+  },
+  "checksum": "4c08f43587473bcf9c385a6332cc0c41a0e23957ff0e12cc395a4272429d639d"
+}

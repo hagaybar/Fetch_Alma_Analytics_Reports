@@ -1,0 +1,13 @@
+{
+  "runId": "01KH0B44WJFAP8ETF0Z92X4HT8",
+  "request": "ui-theme-redesign",
+  "processId": "ui-theme-redesign",
+  "entrypoint": {
+    "importPath": "../../processes/ui-theme-redesign.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/ui-theme-redesign.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-02-09T04:38:58.211Z",
+  "completionSecret": "9f1b98583f6175dda1609de70c6812e5"
+}

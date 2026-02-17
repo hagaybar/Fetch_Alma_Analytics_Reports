@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHNWNREDSF5MYAXVJCS2YVZ6",
+  "taskId": "verify-backend",
+  "invocationKey": "add-active-filter-feature:S000002:verify-backend",
+  "status": "ok",
+  "result": {
+    "issues": [],
+    "success": true
+  },
+  "startedAt": "2026-02-17T13:30:27.003Z",
+  "finishedAt": "2026-02-17T13:30:27.003Z",
+  "value": {
+    "issues": [],
+    "success": true
+  }
+}

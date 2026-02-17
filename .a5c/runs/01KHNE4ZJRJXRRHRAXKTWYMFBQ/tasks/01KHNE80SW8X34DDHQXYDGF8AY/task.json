@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNE80SW8X34DDHQXYDGF8AY",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-redesign:S000002:__sdk.breakpoint",
+  "stepId": "S000002",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "files": [
+          {
+            "format": "code",
+            "language": "css",
+            "path": "frontend/src/index.css"
+          },
+          {
+            "format": "code",
+            "language": "javascript",
+            "path": "frontend/tailwind.config.js"
+          }
+        ]
+      },
+      "question": "Foundation setup complete (Tailwind config, CSS variables, fonts). Review and approve to continue?",
+      "title": "Phase 1: Foundation Review"
+    },
+    "requestedAt": "2026-02-17T09:17:33.884Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "files": [
+          {
+            "format": "code",
+            "language": "css",
+            "path": "frontend/src/index.css"
+          },
+          {
+            "format": "code",
+            "language": "javascript",
+            "path": "frontend/tailwind.config.js"
+          }
+        ]
+      },
+      "question": "Foundation setup complete (Tailwind config, CSS variables, fonts). Review and approve to continue?",
+      "title": "Phase 1: Foundation Review"
+    },
+    "requestedAt": "2026-02-17T09:17:33.884Z"
+  }
+}

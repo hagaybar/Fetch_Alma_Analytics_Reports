@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNWQ54R424Y7BQHC2XATRBF",
+  "taskId": "implement-frontend",
+  "invocationKey": "add-active-filter-feature:S000003:implement-frontend",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Implement frontend changes for active filter",
+  "labels": [
+    "agent",
+    "frontend",
+    "implementation"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KHNWQ54R424Y7BQHC2XATRBF/input.json",
+    "outputJsonPath": "tasks/01KHNWQ54R424Y7BQHC2XATRBF/result.json"
+  },
+  "inputs": {
+    "featureName": "active-filter"
+  }
+}

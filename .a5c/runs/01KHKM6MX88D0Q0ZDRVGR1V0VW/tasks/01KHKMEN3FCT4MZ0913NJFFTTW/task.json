@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHKMEN3FCT4MZ0913NJFFTTW",
+  "taskId": "update-config-manager",
+  "invocationKey": "batch-scheduling-feature:S000002:update-config-manager",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Update config manager",
+  "description": "Add frequency field handling to ConfigManager",
+  "labels": [
+    "backend",
+    "config"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KHKMEN3FCT4MZ0913NJFFTTW/input.json",
+    "outputJsonPath": "tasks/01KHKMEN3FCT4MZ0913NJFFTTW/result.json"
+  },
+  "inputs": {
+    "configManagerFile": "backend/core/config_manager.py",
+    "jsonKey": "FREQUENCY",
+    "newField": "frequency"
+  }
+}

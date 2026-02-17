@@ -1,0 +1,12 @@
+{
+  "type": "EFFECT_RESOLVED",
+  "recordedAt": "2026-02-16T16:27:30.146Z",
+  "data": {
+    "effectId": "01KHKMDEAAV8PCHRVMNYP23AFP",
+    "status": "ok",
+    "resultRef": "tasks/01KHKMDEAAV8PCHRVMNYP23AFP/result.json",
+    "startedAt": "2026-02-16T16:27:30.131Z",
+    "finishedAt": "2026-02-16T16:27:30.131Z"
+  },
+  "checksum": "b64d02b12c6e0916fd617b09b72b775e1b077cecdf396d3eca087baf53e75104"
+}

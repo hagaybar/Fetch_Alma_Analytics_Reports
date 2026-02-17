@@ -1,0 +1,13 @@
+{
+  "runId": "01KHNE4ZJRJXRRHRAXKTWYMFBQ",
+  "request": "ui-redesign",
+  "processId": "ui-redesign",
+  "entrypoint": {
+    "importPath": "../../processes/ui-redesign-process.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/ui-redesign-process.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-02-17T09:15:54.337Z",
+  "completionSecret": "2468eecacb40054b81f4b7ae61c55675"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-02-08T19:41:27.650Z",
+  "data": {
+    "runId": "01KGZCBY63XYHMGGZ9PGN3P3EC",
+    "processId": "ui-redesign",
+    "entrypoint": {
+      "importPath": "../../processes/ui-redesign.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "0edfa30e3a01cb81a8c60cc7fa0feaee7e4c61b39697ca25973f7f36e4d4b00e"
+}

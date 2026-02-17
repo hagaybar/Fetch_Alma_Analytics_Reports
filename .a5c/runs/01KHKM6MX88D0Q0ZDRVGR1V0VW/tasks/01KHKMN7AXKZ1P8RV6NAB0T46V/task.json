@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHKMN7AXKZ1P8RV6NAB0T46V",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "batch-scheduling-feature:S000005:__sdk.breakpoint",
+  "stepId": "S000005",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "files": [
+          {
+            "format": "code",
+            "language": "python",
+            "path": "backend/models/task.py"
+          },
+          {
+            "format": "code",
+            "language": "python",
+            "path": "backend/core/config_manager.py"
+          },
+          {
+            "format": "code",
+            "language": "json",
+            "path": "reports_config.json"
+          },
+          {
+            "format": "code",
+            "language": "python",
+            "path": "fetch_reports_from_alma_analytics.py"
+          }
+        ]
+      },
+      "question": "All code changes complete. Review the modifications and approve for final verification?",
+      "title": "Code Review Checkpoint"
+    },
+    "requestedAt": "2026-02-16T16:31:09.149Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "files": [
+          {
+            "format": "code",
+            "language": "python",
+            "path": "backend/models/task.py"
+          },
+          {
+            "format": "code",
+            "language": "python",
+            "path": "backend/core/config_manager.py"
+          },
+          {
+            "format": "code",
+            "language": "json",
+            "path": "reports_config.json"
+          },
+          {
+            "format": "code",
+            "language": "python",
+            "path": "fetch_reports_from_alma_analytics.py"
+          }
+        ]
+      },
+      "question": "All code changes complete. Review the modifications and approve for final verification?",
+      "title": "Code Review Checkpoint"
+    },
+    "requestedAt": "2026-02-16T16:31:09.149Z"
+  }
+}

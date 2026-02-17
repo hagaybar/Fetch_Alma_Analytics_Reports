@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KH0ASAGAQWNFY67RCM0S4X47",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "fix-sidebar-overflow:S000003:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true,
+    "note": "Fix verified - screenshots show content is no longer hidden"
+  },
+  "startedAt": "2026-02-09T04:33:17.255Z",
+  "finishedAt": "2026-02-09T04:33:17.255Z",
+  "value": {
+    "approved": true,
+    "note": "Fix verified - screenshots show content is no longer hidden"
+  }
+}

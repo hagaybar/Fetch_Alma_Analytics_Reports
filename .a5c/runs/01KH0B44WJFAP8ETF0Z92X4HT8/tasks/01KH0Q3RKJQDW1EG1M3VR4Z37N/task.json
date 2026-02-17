@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH0Q3RKJQDW1EG1M3VR4Z37N",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-theme-redesign:S000006:__sdk.breakpoint",
+  "stepId": "S000006",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Design update complete. Please review at http://localhost:5174 and approve.",
+      "title": "Final Design Review"
+    },
+    "requestedAt": "2026-02-09T08:08:28.530Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Design update complete. Please review at http://localhost:5174 and approve.",
+      "title": "Final Design Review"
+    },
+    "requestedAt": "2026-02-09T08:08:28.530Z"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNWW53EX7RZ1DPS6DN000KW",
+  "taskId": "verify-frontend",
+  "invocationKey": "add-active-filter-feature:S000004:verify-frontend",
+  "stepId": "S000004",
+  "kind": "agent",
+  "title": "Verify frontend changes",
+  "labels": [
+    "agent",
+    "frontend",
+    "verification"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KHNWW53EX7RZ1DPS6DN000KW/input.json",
+    "outputJsonPath": "tasks/01KHNWW53EX7RZ1DPS6DN000KW/result.json"
+  },
+  "inputs": {
+    "frontendResult": {
+      "filesModified": [
+        "frontend/src/types/index.ts",
+        "frontend/src/components/tasks/TaskCard.tsx",
+        "frontend/src/components/tasks/TaskForm.tsx",
+        "frontend/src/components/tasks/TaskList.tsx",
+        "frontend/src/pages/TasksPage.tsx"
+      ],
+      "success": true,
+      "summary": "Added 'active' boolean field to the frontend UI for task management. Changes include: (1) Added 'active: boolean' to Task, TaskCreate, and TaskUpdate interfaces in types/index.ts. (2) Updated TaskCard.tsx to display an Active/Inactive badge with 'success' (green) or 'warning' (yellow) variants, added opacity-60 styling for inactive tasks, and added Activate/Deactivate toggle menu item with Power/PowerOff icons. (3) Updated TaskForm.tsx to include an 'Active' checkbox next to the task name field, defaulting to true for new tasks. (4) Updated TaskList.tsx and TasksPage.tsx to pass the new onToggleActive callback through the component hierarchy, implementing the toggle logic that updates the task via the API."
+    }
+  }
+}

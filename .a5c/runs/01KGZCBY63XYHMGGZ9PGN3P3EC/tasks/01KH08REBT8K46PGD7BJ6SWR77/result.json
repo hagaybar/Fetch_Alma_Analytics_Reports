@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KH08REBT8K46PGD7BJ6SWR77",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-redesign:S000002:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true
+  },
+  "startedAt": "2026-02-09T03:58:32.902Z",
+  "finishedAt": "2026-02-09T03:58:32.902Z",
+  "value": {
+    "approved": true
+  }
+}

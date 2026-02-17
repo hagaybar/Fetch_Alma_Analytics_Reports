@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNWNREDSF5MYAXVJCS2YVZ6",
+  "taskId": "verify-backend",
+  "invocationKey": "add-active-filter-feature:S000002:verify-backend",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Verify backend changes",
+  "labels": [
+    "agent",
+    "backend",
+    "verification"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KHNWNREDSF5MYAXVJCS2YVZ6/input.json",
+    "outputJsonPath": "tasks/01KHNWNREDSF5MYAXVJCS2YVZ6/result.json"
+  },
+  "inputs": {
+    "backendResult": {
+      "filesModified": [
+        "backend/models/task.py",
+        "backend/core/config_manager.py",
+        "fetch_reports_from_alma_analytics.py"
+      ],
+      "success": true,
+      "summary": "Added 'active' boolean field to task configuration with default value True. Changes: (1) Added 'active: bool = True' to TaskBase model in task.py, (2) Updated _task_from_dict in config_manager.py to read ACTIVE field with default True for backwards compatibility, (3) Updated _task_to_dict in config_manager.py to write ACTIVE field to JSON config, (4) Updated run_batch_reports in fetch_reports_from_alma_analytics.py to filter by active=True when filtering by frequency. Existing tasks without ACTIVE field will default to True ensuring backwards compatibility."
+    }
+  }
+}

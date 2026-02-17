@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNWZV8T2J6MVADJCCGEXJPE",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "add-active-filter-feature:S000006:__sdk.breakpoint",
+  "stepId": "S000006",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {},
+      "question": "All changes implemented. Review and approve for completion.",
+      "title": "Feature Complete"
+    },
+    "requestedAt": "2026-02-17T13:35:14.714Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {},
+      "question": "All changes implemented. Review and approve for completion.",
+      "title": "Feature Complete"
+    },
+    "requestedAt": "2026-02-17T13:35:14.714Z"
+  }
+}

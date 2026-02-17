@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH08VZBA4JGATFNN364QDQER",
+  "taskId": "redesign-pages",
+  "invocationKey": "ui-redesign:S000006:redesign-pages",
+  "stepId": "S000006",
+  "kind": "agent",
+  "title": "Redesign page layouts",
+  "io": {
+    "inputJsonPath": "tasks/01KH08VZBA4JGATFNN364QDQER/input.json",
+    "outputJsonPath": "tasks/01KH08VZBA4JGATFNN364QDQER/result.json"
+  },
+  "inputs": {}
+}

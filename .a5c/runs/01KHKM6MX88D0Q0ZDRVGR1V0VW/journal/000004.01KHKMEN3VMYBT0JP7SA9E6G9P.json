@@ -1,0 +1,19 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-16T16:27:33.883Z",
+  "data": {
+    "effectId": "01KHKMEN3FCT4MZ0913NJFFTTW",
+    "invocationKey": "batch-scheduling-feature:S000002:update-config-manager",
+    "invocationHash": "3e8dcb27a605c755356f86e6c6c058181c2b646f409ab57e330a3466f57756b6",
+    "stepId": "S000002",
+    "taskId": "update-config-manager",
+    "kind": "agent",
+    "label": "backend",
+    "taskDefRef": "tasks/01KHKMEN3FCT4MZ0913NJFFTTW/task.json",
+    "labels": [
+      "backend",
+      "config"
+    ]
+  },
+  "checksum": "7db3aa751ebf45436040785da7760662e2930584abc2378e5841194fbdc83e29"
+}

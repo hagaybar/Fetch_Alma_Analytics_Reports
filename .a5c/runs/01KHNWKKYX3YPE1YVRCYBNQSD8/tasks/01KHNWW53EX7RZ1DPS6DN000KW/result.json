@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHNWW53EX7RZ1DPS6DN000KW",
+  "taskId": "verify-frontend",
+  "invocationKey": "add-active-filter-feature:S000004:verify-frontend",
+  "status": "ok",
+  "result": {
+    "issues": [],
+    "success": true
+  },
+  "startedAt": "2026-02-17T13:33:58.647Z",
+  "finishedAt": "2026-02-17T13:33:58.647Z",
+  "value": {
+    "issues": [],
+    "success": true
+  }
+}

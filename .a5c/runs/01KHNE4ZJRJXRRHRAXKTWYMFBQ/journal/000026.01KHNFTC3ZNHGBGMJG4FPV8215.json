@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T09:45:03.871Z",
+  "data": {
+    "effectId": "01KHNFTC3K29612Z9EK7298P7F",
+    "invocationKey": "ui-redesign:S000013:quality-scoring",
+    "invocationHash": "be1c4cfe9c4b6c4cf52056401fbbb023a50750f09bdaa5361d1b51d2e90dad71",
+    "stepId": "S000013",
+    "taskId": "quality-scoring",
+    "kind": "agent",
+    "label": "Quality Scoring (Iteration 1)",
+    "taskDefRef": "tasks/01KHNFTC3K29612Z9EK7298P7F/task.json"
+  },
+  "checksum": "409c29868c225f7d0623b54bd92c6618d76e1a744cff11c62db807f2f538b683"
+}

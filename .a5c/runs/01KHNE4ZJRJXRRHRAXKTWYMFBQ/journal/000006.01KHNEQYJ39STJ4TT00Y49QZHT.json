@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T09:26:15.876Z",
+  "data": {
+    "effectId": "01KHNEQYHQYMN3K9F8ZT4Q2JTF",
+    "invocationKey": "ui-redesign:S000003:layout-components",
+    "invocationHash": "bef9bf21d0712add3fad63f74ebb3d4a1017dc90f2be56ce29b39b2f12246b3b",
+    "stepId": "S000003",
+    "taskId": "layout-components",
+    "kind": "agent",
+    "label": "Update Layout Components",
+    "taskDefRef": "tasks/01KHNEQYHQYMN3K9F8ZT4Q2JTF/task.json"
+  },
+  "checksum": "80be01e9f993c958876d07dbc81e9eb1cdf91f43a2a066ae024559cd8af1b0e7"
+}

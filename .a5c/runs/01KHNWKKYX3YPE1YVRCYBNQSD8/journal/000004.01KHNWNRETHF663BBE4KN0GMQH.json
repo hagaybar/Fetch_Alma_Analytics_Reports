@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T13:29:44.154Z",
+  "data": {
+    "effectId": "01KHNWNREDSF5MYAXVJCS2YVZ6",
+    "invocationKey": "add-active-filter-feature:S000002:verify-backend",
+    "invocationHash": "b65e68e3f0aad6c77eb6dfc17cca30073d6267eb7f69180e0f225789d48e9efa",
+    "stepId": "S000002",
+    "taskId": "verify-backend",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KHNWNREDSF5MYAXVJCS2YVZ6/task.json",
+    "labels": [
+      "agent",
+      "backend",
+      "verification"
+    ]
+  },
+  "checksum": "3cd112c0382e297fa6a06adb6cc9463fe79c82d39a52993100ca1cbd2b7a5b91"
+}

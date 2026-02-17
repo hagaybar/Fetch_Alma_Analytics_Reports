@@ -1,0 +1,18 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-09T04:33:03.512Z",
+  "data": {
+    "effectId": "01KH0ASAGAQWNFY67RCM0S4X47",
+    "invocationKey": "fix-sidebar-overflow:S000003:__sdk.breakpoint",
+    "invocationHash": "6fa53e69265cde0725c26266468bb36e68aab320846fe03cfb17c428c170940e",
+    "stepId": "S000003",
+    "taskId": "__sdk.breakpoint",
+    "kind": "breakpoint",
+    "label": "breakpoint",
+    "taskDefRef": "tasks/01KH0ASAGAQWNFY67RCM0S4X47/task.json",
+    "labels": [
+      "breakpoint"
+    ]
+  },
+  "checksum": "ea70a3068b47a1239a1647474634968d93eba4124f5e342e9771a1da47c37bae"
+}

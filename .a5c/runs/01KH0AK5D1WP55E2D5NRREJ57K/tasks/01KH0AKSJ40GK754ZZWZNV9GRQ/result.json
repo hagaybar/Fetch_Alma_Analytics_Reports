@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KH0AKSJ40GK754ZZWZNV9GRQ",
+  "taskId": "fix-overflow",
+  "invocationKey": "fix-sidebar-overflow:S000001:fix-overflow",
+  "status": "ok",
+  "result": {
+    "change": "Added wrapper div with 'ml-64 min-h-screen' class around main element to properly offset content from fixed 256px sidebar",
+    "success": true
+  },
+  "startedAt": "2026-02-09T04:30:43.781Z",
+  "finishedAt": "2026-02-09T04:30:43.781Z",
+  "value": {
+    "change": "Added wrapper div with 'ml-64 min-h-screen' class around main element to properly offset content from fixed 256px sidebar",
+    "success": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHKMEN3FCT4MZ0913NJFFTTW",
+  "taskId": "update-config-manager",
+  "invocationKey": "batch-scheduling-feature:S000002:update-config-manager",
+  "status": "ok",
+  "result": {
+    "changes": "Updated config_manager.py to handle the frequency field: Modified _task_from_dict to read FREQUENCY with daily default, and _task_to_dict to write frequency as FREQUENCY",
+    "filesModified": [
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/backend/core/config_manager.py"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-02-16T16:28:15.801Z",
+  "finishedAt": "2026-02-16T16:28:15.801Z",
+  "value": {
+    "changes": "Updated config_manager.py to handle the frequency field: Modified _task_from_dict to read FREQUENCY with daily default, and _task_to_dict to write frequency as FREQUENCY",
+    "filesModified": [
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/backend/core/config_manager.py"
+    ],
+    "success": true
+  }
+}

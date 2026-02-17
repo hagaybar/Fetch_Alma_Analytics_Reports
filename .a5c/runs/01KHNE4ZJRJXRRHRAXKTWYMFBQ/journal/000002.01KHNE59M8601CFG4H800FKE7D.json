@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T09:16:04.616Z",
+  "data": {
+    "effectId": "01KHNE59KV34A8HG2P2B076ANF",
+    "invocationKey": "ui-redesign:S000001:design-system-setup",
+    "invocationHash": "59d211e5c24ce03872a7f59973d00e456e11a9e8a317f424edc0d80938fa0840",
+    "stepId": "S000001",
+    "taskId": "design-system-setup",
+    "kind": "agent",
+    "label": "Setup Design System Foundation",
+    "taskDefRef": "tasks/01KHNE59KV34A8HG2P2B076ANF/task.json"
+  },
+  "checksum": "1989a7e71df1a042fbc84309215a66025d06e950fa351db998d693d8c86a014b"
+}

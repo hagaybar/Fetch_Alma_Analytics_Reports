@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH0B7B1WJ3MKPV1P6B60C3GD",
+  "taskId": "redesign-layout",
+  "invocationKey": "ui-theme-redesign:S000002:redesign-layout",
+  "stepId": "S000002",
+  "kind": "agent",
+  "title": "Redesign layout with more whitespace",
+  "io": {
+    "inputJsonPath": "tasks/01KH0B7B1WJ3MKPV1P6B60C3GD/input.json",
+    "outputJsonPath": "tasks/01KH0B7B1WJ3MKPV1P6B60C3GD/result.json"
+  },
+  "inputs": {}
+}

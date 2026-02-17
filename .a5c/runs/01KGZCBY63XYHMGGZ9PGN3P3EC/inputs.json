@@ -1,0 +1,9 @@
+{
+  "issues": [
+    "Left sidebar hides some reports - critical overflow/layout bug",
+    "UI is not inviting and looks dense despite having few objects",
+    "Poor visual hierarchy",
+    "Cramped task cards with too many buttons"
+  ],
+  "designDirection": "Professional dashboard - data-focused, crisp typography, clear hierarchy, enterprise feel"
+}

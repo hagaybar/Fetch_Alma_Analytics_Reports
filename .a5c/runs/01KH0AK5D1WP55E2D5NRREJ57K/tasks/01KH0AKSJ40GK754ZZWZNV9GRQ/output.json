@@ -1,0 +1,4 @@
+{
+  "success": true,
+  "change": "Added wrapper div with 'ml-64 min-h-screen' class around main element to properly offset content from fixed 256px sidebar"
+}

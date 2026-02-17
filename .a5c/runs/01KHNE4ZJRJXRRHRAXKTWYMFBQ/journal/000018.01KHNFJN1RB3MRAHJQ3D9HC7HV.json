@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T09:40:50.872Z",
+  "data": {
+    "effectId": "01KHNFJN1C1708DS0HXA5V2R8F",
+    "invocationKey": "ui-redesign:S000009:pages",
+    "invocationHash": "08d998ceb05bfdadd4e32c57c42988cb7c0c136e730da738ec6a230d66aaeb84",
+    "stepId": "S000009",
+    "taskId": "pages",
+    "kind": "agent",
+    "label": "Update Pages",
+    "taskDefRef": "tasks/01KHNFJN1C1708DS0HXA5V2R8F/task.json"
+  },
+  "checksum": "f775db048226dca1e35288abbe94ef43b35cab7f2ac1cd6834408e0af9ef3114"
+}

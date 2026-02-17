@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHKMJE3CWQA3QYWGGRSG8RTX",
+  "taskId": "update-cli-script",
+  "invocationKey": "batch-scheduling-feature:S000004:update-cli-script",
+  "status": "ok",
+  "result": {
+    "changes": "Updated CLI script with batch execution support. Added --report-type argument, run_single_report() and run_batch_reports() functions. Continues on error with summary logging.",
+    "newFeatures": [
+      "--report-type argument accepting daily or weekly",
+      "run_batch_reports() function with error handling",
+      "Summary logging with success/failure counts",
+      "Exit code 1 on any failure for CI/CD",
+      "Backward compatibility preserved"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-02-16T16:31:05.445Z",
+  "finishedAt": "2026-02-16T16:31:05.445Z",
+  "value": {
+    "changes": "Updated CLI script with batch execution support. Added --report-type argument, run_single_report() and run_batch_reports() functions. Continues on error with summary logging.",
+    "newFeatures": [
+      "--report-type argument accepting daily or weekly",
+      "run_batch_reports() function with error handling",
+      "Summary logging with success/failure counts",
+      "Exit code 1 on any failure for CI/CD",
+      "Backward compatibility preserved"
+    ],
+    "success": true
+  }
+}

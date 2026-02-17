@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-08T19:41:55.302Z",
+  "data": {
+    "effectId": "01KGZCCS6TD0SXG5XSADAYFA6V",
+    "invocationKey": "ui-redesign:S000001:analyze-ui",
+    "invocationHash": "78a46461c99dd4d6e7f2b4de205d4bbe5ae8ab2baf93d6e13eb3500c5ca702c2",
+    "stepId": "S000001",
+    "taskId": "analyze-ui",
+    "kind": "agent",
+    "label": "Analyze current UI issues",
+    "taskDefRef": "tasks/01KGZCCS6TD0SXG5XSADAYFA6V/task.json"
+  },
+  "checksum": "efcd29c229556bbe004184580b80f9f5c58fe127a1f3615df10051ac64caab63"
+}

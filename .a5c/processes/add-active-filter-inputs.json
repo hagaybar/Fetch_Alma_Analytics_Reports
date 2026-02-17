@@ -1,0 +1,4 @@
+{
+  "featureName": "active-filter",
+  "description": "Add active boolean field to task configuration to filter batch report downloads. Tasks with active=false should be excluded from daily/weekly batch runs."
+}

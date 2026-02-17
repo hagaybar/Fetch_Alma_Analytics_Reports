@@ -1,0 +1,19 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-16T16:28:19.355Z",
+  "data": {
+    "effectId": "01KHKMG1GE1BZB1TMWFYEXXBHG",
+    "invocationKey": "batch-scheduling-feature:S000003:update-reports-config",
+    "invocationHash": "513957b571d18e440be5dd8cc6fc108f07bea409dc297b824559f752ea8b968a",
+    "stepId": "S000003",
+    "taskId": "update-reports-config",
+    "kind": "agent",
+    "label": "config",
+    "taskDefRef": "tasks/01KHKMG1GE1BZB1TMWFYEXXBHG/task.json",
+    "labels": [
+      "config",
+      "json"
+    ]
+  },
+  "checksum": "ebcb992255699c4ee71656ada8ef46fb1412a14a0635b1b9776b3e58cb8cc059"
+}

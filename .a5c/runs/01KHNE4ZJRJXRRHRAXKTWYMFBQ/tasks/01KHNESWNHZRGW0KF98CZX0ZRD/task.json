@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNESWNHZRGW0KF98CZX0ZRD",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-redesign:S000004:__sdk.breakpoint",
+  "stepId": "S000004",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "files": [
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/layout/Sidebar.tsx"
+          },
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/layout/MainLayout.tsx"
+          }
+        ]
+      },
+      "question": "Layout components updated (Sidebar, MainLayout, Header). Review and approve to continue?",
+      "title": "Phase 2: Layout Review"
+    },
+    "requestedAt": "2026-02-17T09:27:19.473Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "files": [
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/layout/Sidebar.tsx"
+          },
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/layout/MainLayout.tsx"
+          }
+        ]
+      },
+      "question": "Layout components updated (Sidebar, MainLayout, Header). Review and approve to continue?",
+      "title": "Phase 2: Layout Review"
+    },
+    "requestedAt": "2026-02-17T09:27:19.473Z"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T09:40:01.362Z",
+  "data": {
+    "effectId": "01KHNFH4P68YEK8A4TK40XWZ0Q",
+    "invocationKey": "ui-redesign:S000008:__sdk.breakpoint",
+    "invocationHash": "a33c26f6005bebebd07c89ff5745fb283cb7e3679f950e02fb69b30be826138b",
+    "stepId": "S000008",
+    "taskId": "__sdk.breakpoint",
+    "kind": "breakpoint",
+    "label": "breakpoint",
+    "taskDefRef": "tasks/01KHNFH4P68YEK8A4TK40XWZ0Q/task.json",
+    "labels": [
+      "breakpoint"
+    ]
+  },
+  "checksum": "5d73ae6536a5353421e0ea28955c4ea230fab9f1aa78e47cddf12cbb0dbbd1a6"
+}

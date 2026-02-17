@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHNEVKY819SKGCDYKQ9F0J44",
+  "taskId": "ui-components",
+  "invocationKey": "ui-redesign:S000005:ui-components",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Button.tsx",
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Card.tsx",
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Modal.tsx",
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Input.tsx",
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Select.tsx",
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Badge.tsx"
+    ],
+    "summary": "Redesigned 6 UI primitive components to match the new design system. Button: updated with rounded-xl, indigo-based primary styling with shadow, secondary and outline variants with slate colors. Card: updated with white/slate-900 background, rounded-2xl, hover:shadow-xl transition. Modal: added backdrop-blur-sm, rounded-2xl, sticky header with close button, scrollable body with custom-scrollbar, sticky gray-50 footer. Input: updated with gray-50 background, rounded-lg, primary ring focus state, added hint prop. Select: matching Input styling with gray-50 background and rounded-lg. Badge: added frequency variant with dynamic colors (daily=emerald, weekly=blue, monthly=amber, on_demand=slate), format variant for file types, and helper components FrequencyBadge and FormatBadge."
+  },
+  "startedAt": "2026-02-17T09:30:14.188Z",
+  "finishedAt": "2026-02-17T09:30:14.188Z",
+  "value": {
+    "filesModified": [
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Button.tsx",
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Card.tsx",
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Modal.tsx",
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Input.tsx",
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Select.tsx",
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/frontend/src/components/ui/Badge.tsx"
+    ],
+    "summary": "Redesigned 6 UI primitive components to match the new design system. Button: updated with rounded-xl, indigo-based primary styling with shadow, secondary and outline variants with slate colors. Card: updated with white/slate-900 background, rounded-2xl, hover:shadow-xl transition. Modal: added backdrop-blur-sm, rounded-2xl, sticky header with close button, scrollable body with custom-scrollbar, sticky gray-50 footer. Input: updated with gray-50 background, rounded-lg, primary ring focus state, added hint prop. Select: matching Input styling with gray-50 background and rounded-lg. Badge: added frequency variant with dynamic colors (daily=emerald, weekly=blue, monthly=amber, on_demand=slate), format variant for file types, and helper components FrequencyBadge and FormatBadge."
+  }
+}

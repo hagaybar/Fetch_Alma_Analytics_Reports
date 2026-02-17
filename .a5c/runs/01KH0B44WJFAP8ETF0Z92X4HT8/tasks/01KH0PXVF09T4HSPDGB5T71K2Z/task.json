@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH0PXVF09T4HSPDGB5T71K2Z",
+  "taskId": "redesign-pages",
+  "invocationKey": "ui-theme-redesign:S000004:redesign-pages",
+  "stepId": "S000004",
+  "kind": "agent",
+  "title": "Redesign pages with more whitespace",
+  "io": {
+    "inputJsonPath": "tasks/01KH0PXVF09T4HSPDGB5T71K2Z/input.json",
+    "outputJsonPath": "tasks/01KH0PXVF09T4HSPDGB5T71K2Z/result.json"
+  },
+  "inputs": {}
+}

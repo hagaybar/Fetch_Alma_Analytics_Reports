@@ -1,0 +1,14 @@
+{
+  "type": "RUN_CREATED",
+  "recordedAt": "2026-02-17T13:28:34.050Z",
+  "data": {
+    "runId": "01KHNWKKYX3YPE1YVRCYBNQSD8",
+    "processId": "add-active-filter-feature",
+    "entrypoint": {
+      "importPath": "../../processes/add-active-filter-feature.js",
+      "exportName": "process"
+    },
+    "inputsRef": "inputs.json"
+  },
+  "checksum": "29565d73f8c899f3e8b2b51f27f44cdc65e74a0c1992cadafe61aa9df7b13003"
+}
