@@ -1,6 +1,3 @@
-import { RefreshCw } from 'lucide-react';
-import { Button } from '../ui/Button';
-
 interface HeaderProps {
   title: string;
   description?: string;
@@ -10,26 +7,22 @@ interface HeaderProps {
 
 export function Header({ title, description, onRefresh, actions }: HeaderProps) {
   return (
-    <header className="flex items-center justify-between border-b border-[hsl(var(--border))] bg-[hsl(var(--card))] px-8 py-5 shadow-sm">
+    <header className="flex justify-between items-end mb-10">
       <div>
-        <h1 className="text-2xl font-semibold tracking-tight text-[hsl(var(--foreground))]">
-          {title}
-        </h1>
+        <h2 className="text-3xl font-bold tracking-tight">{title}</h2>
         {description && (
-          <p className="mt-1 text-sm text-[hsl(var(--muted-foreground))]">{description}</p>
+          <p className="text-slate-500 mt-1">{description}</p>
         )}
       </div>
-      <div className="flex items-center gap-3">
+      <div className="flex gap-3">
         {onRefresh && (
-          <Button
-            variant="ghost"
-            size="sm"
+          <button
             onClick={onRefresh}
-            className="text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] hover:bg-[hsl(var(--secondary))]"
+            className="flex items-center gap-2 px-4 py-2 text-slate-600 bg-white border border-slate-200 rounded-lg hover:shadow-sm transition-all"
           >
-            <RefreshCw className="h-4 w-4" />
-            <span className="ml-2 text-sm font-medium">Refresh</span>
-          </Button>
+            <span className="material-icons-round text-lg">refresh</span>
+            Refresh
+          </button>
         )}
         {actions}
       </div>

@@ -3,13 +3,11 @@ import { Sidebar } from './Sidebar';
 
 export function MainLayout() {
   return (
-    <div className="min-h-screen bg-[hsl(var(--background))]">
+    <div className="bg-background-light text-slate-900 min-h-screen flex">
       <Sidebar />
-      <div className="min-h-screen" style={{ marginLeft: '16rem' }}>
-        <main>
-          <Outlet />
-        </main>
-      </div>
+      <main className="flex-1 p-8">
+        <Outlet />
+      </main>
     </div>
   );
 }

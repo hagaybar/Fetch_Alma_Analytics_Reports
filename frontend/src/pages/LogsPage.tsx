@@ -51,73 +51,74 @@ export function LogsPage() {
   };
 
   return (
-    <div>
-      <Header title="Logs" />
+    <div className="p-8">
+      <Header
+        title="Logs"
+        description="View execution logs for your Alma Analytics report tasks."
+      />
 
-      <div className="p-6">
-        <div className="mb-6 flex items-end gap-4">
-          <div className="w-64">
-            <Select
-              label="Task"
-              value={selectedTask}
-              onChange={(e) => handleTaskChange(e.target.value)}
-              options={taskOptions}
-              disabled={tasksLoading}
-            />
-          </div>
-          <label className="flex items-center gap-2">
-            <input
-              type="checkbox"
-              checked={testMode}
-              onChange={(e) => setTestMode(e.target.checked)}
-              className="h-4 w-4 rounded border-gray-300"
-            />
-            <span className="text-sm">Test mode logs</span>
-          </label>
+      <div className="mb-6 flex items-end gap-4">
+        <div className="w-64">
+          <Select
+            label="Task"
+            value={selectedTask}
+            onChange={(e) => handleTaskChange(e.target.value)}
+            options={taskOptions}
+            disabled={tasksLoading}
+          />
         </div>
+        <label className="flex items-center gap-2 pb-1">
+          <input
+            type="checkbox"
+            checked={testMode}
+            onChange={(e) => setTestMode(e.target.checked)}
+            className="h-4 w-4 rounded border-slate-300 dark:border-slate-600 text-primary focus:ring-primary"
+          />
+          <span className="text-sm text-slate-600 dark:text-slate-300 font-medium">Test mode logs</span>
+        </label>
+      </div>
 
-        {!selectedTask ? (
+      {!selectedTask ? (
+        <Card>
+          <CardContent className="py-12 text-center text-slate-500 dark:text-slate-400">
+            Select a task to view its log files
+          </CardContent>
+        </Card>
+      ) : (
+        <div className="grid gap-6 lg:grid-cols-[300px_1fr]">
           <Card>
-            <CardContent className="py-12 text-center text-[hsl(var(--muted-foreground))]">
-              Select a task to view its log files
+            <CardHeader>
+              <CardTitle>Log Files</CardTitle>
+            </CardHeader>
+            <CardContent>
+              {loading && !content ? (
+                <p className="py-8 text-center text-slate-500 dark:text-slate-400">Loading...</p>
+              ) : (
+                <LogFileList
+                  files={files}
+                  selectedFile={selectedFile}
+                  onSelect={handleFileSelect}
+                />
+              )}
             </CardContent>
           </Card>
-        ) : (
-          <div className="grid gap-6 lg:grid-cols-[300px_1fr]">
-            <Card>
-              <CardHeader>
-                <CardTitle>Log Files</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {loading && !content ? (
-                  <p className="py-8 text-center text-[hsl(var(--muted-foreground))]">Loading...</p>
-                ) : (
-                  <LogFileList
-                    files={files}
-                    selectedFile={selectedFile}
-                    onSelect={handleFileSelect}
-                  />
-                )}
-              </CardContent>
-            </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle>Log Content</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {content ? (
-                  <LogViewer content={content.content} filename={content.name} />
-                ) : (
-                  <div className="py-12 text-center text-[hsl(var(--muted-foreground))]">
-                    Select a log file to view its contents
-                  </div>
-                )}
-              </CardContent>
-            </Card>
-          </div>
-        )}
-      </div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Log Content</CardTitle>
+            </CardHeader>
+            <CardContent>
+              {content ? (
+                <LogViewer content={content.content} filename={content.name} />
+              ) : (
+                <div className="py-12 text-center text-slate-500 dark:text-slate-400">
+                  Select a log file to view its contents
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        </div>
+      )}
     </div>
   );
 }

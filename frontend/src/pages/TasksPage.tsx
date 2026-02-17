@@ -68,34 +68,36 @@ export function TasksPage() {
   };
 
   return (
-    <div>
+    <div className="p-8">
       <Header
         title="Tasks"
-        description="Manage your Alma Analytics report tasks"
+        description="Manage and automate your Alma Analytics report exports."
         onRefresh={fetchTasks}
         actions={
-          <Button onClick={handleCreate}>
+          <Button onClick={handleCreate} size="lg">
             <Plus className="h-4 w-4" />
             New Task
           </Button>
         }
       />
 
-      <div className="p-10">
-        <TaskList
-          tasks={tasks}
-          loading={loading}
-          onEdit={handleEdit}
-          onDelete={setDeletingTask}
-          onRun={handleRun}
-          onViewLogs={handleViewLogs}
-        />
-      </div>
+      <TaskList
+        tasks={tasks}
+        loading={loading}
+        onEdit={handleEdit}
+        onDelete={setDeletingTask}
+        onRun={handleRun}
+        onViewLogs={handleViewLogs}
+      />
 
       <TaskForm
         isOpen={formOpen}
         onClose={() => setFormOpen(false)}
         onSubmit={handleFormSubmit}
+        onDelete={(task) => {
+          setFormOpen(false);
+          setDeletingTask(task);
+        }}
         task={editingTask}
       />
 

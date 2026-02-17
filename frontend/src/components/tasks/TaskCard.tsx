@@ -1,9 +1,5 @@
-import { useState, useRef, useEffect } from 'react';
-import { Play, Edit2, Trash2, FileText, TestTube, MoreVertical, Calendar } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '../ui/Card';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
 import type { Task } from '../../types';
+import { FrequencyBadge, FormatBadge } from '../ui/Badge';
 
 interface TaskCardProps {
   task: Task;
@@ -13,101 +9,108 @@ interface TaskCardProps {
   onViewLogs: (task: Task) => void;
 }
 
-export function TaskCard({ task, onEdit, onDelete, onRun, onViewLogs }: TaskCardProps) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-  const formatBadge = task.output_format.toUpperCase();
+// Helper to truncate path for display
+function truncatePath(path: string, maxLength: number = 40): string {
+  if (path.length <= maxLength) return path;
+  const parts = path.split(/[/\\]/);
+  if (parts.length <= 2) return path;
+  const first = parts[0];
+  const last = parts.slice(-2).join('/');
+  return `${first}.../${last}`;
+}
 
-  // Close menu when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setMenuOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+// Get icon based on format
+function getFormatIcon(format: string): string {
+  switch (format.toLowerCase()) {
+    case 'xlsx':
+      return 'description';
+    case 'csv':
+      return 'description';
+    case 'tsv':
+      return 'table_chart';
+    default:
+      return 'description';
+  }
+}
 
-  const handleMenuAction = (action: () => void) => {
-    setMenuOpen(false);
-    action();
-  };
+export function TaskCard({ task, onEdit, onDelete, onRun }: TaskCardProps) {
+  const frequency = (task.frequency || 'daily') as 'daily' | 'weekly' | 'monthly' | 'on_demand';
+  const formatIcon = getFormatIcon(task.output_format);
 
   return (
-    <Card className="flex flex-col">
-      <CardHeader className="pb-4">
-        <div className="flex items-start justify-between">
-          <CardTitle className="text-lg font-semibold">{task.name}</CardTitle>
-          <div className="flex gap-2">
-            <Badge variant="default" className="flex items-center gap-1">
-              <Calendar className="h-3 w-3" />
-              {task.frequency || 'daily'}
-            </Badge>
-            <Badge variant="outline">{formatBadge}</Badge>
+    <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:shadow-xl transition-shadow group">
+      {/* Header */}
+      <div className="flex justify-between items-start mb-4">
+        <div className="flex items-center gap-3">
+          <div className="p-2 bg-indigo-50 dark:bg-indigo-900/30 text-primary rounded-xl">
+            <span className="material-icons-round">{formatIcon}</span>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg text-slate-900 dark:text-white">{task.name}</h3>
+            <div className="flex items-center gap-2 mt-0.5">
+              <FrequencyBadge frequency={frequency} />
+              <span className="text-xs text-slate-400">|</span>
+              <FormatBadge format={task.output_format} />
+            </div>
           </div>
         </div>
-      </CardHeader>
-      <CardContent className="flex-1 space-y-3 text-sm text-[hsl(var(--muted-foreground))]">
-        <p className="truncate" title={task.output_file_name}>
-          <span className="font-medium text-[hsl(var(--foreground))]">Output:</span>{' '}
-          {task.output_file_name}
-        </p>
-        <p className="truncate" title={task.output_path}>
-          <span className="font-medium text-[hsl(var(--foreground))]">Path:</span> {task.output_path}
-        </p>
-        {task.test_row_limit && (
-          <p>
-            <span className="font-medium text-[hsl(var(--foreground))]">Test limit:</span>{' '}
-            {task.test_row_limit} rows
-          </p>
-        )}
-      </CardContent>
-      <CardFooter className="flex-wrap gap-3 mt-4">
-        <Button onClick={() => onRun(task, false)} className="flex-1">
-          <Play className="h-4 w-4" />
-          Run
-        </Button>
-        <Button variant="secondary" onClick={() => onRun(task, true)}>
-          <TestTube className="h-4 w-4" />
-          Test
-        </Button>
-        <div className="relative" ref={menuRef}>
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="More actions"
+        {/* Edit/Delete buttons - appear on hover */}
+        <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+          <button
+            onClick={() => onEdit(task)}
+            className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+            aria-label="Edit task"
           >
-            <MoreVertical className="h-4 w-4" />
-          </Button>
-          {menuOpen && (
-            <div className="absolute right-0 top-full mt-1 z-50 min-w-[140px] rounded-md border border-[hsl(var(--border))] bg-[hsl(var(--card))] shadow-lg">
-              <button
-                className="flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-[hsl(var(--accent))] text-left"
-                onClick={() => handleMenuAction(() => onViewLogs(task))}
-              >
-                <FileText className="h-4 w-4" />
-                View Logs
-              </button>
-              <button
-                className="flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-[hsl(var(--accent))] text-left"
-                onClick={() => handleMenuAction(() => onEdit(task))}
-              >
-                <Edit2 className="h-4 w-4" />
-                Edit
-              </button>
-              <button
-                className="flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-[hsl(var(--accent))] text-left text-[hsl(var(--destructive))]"
-                onClick={() => handleMenuAction(() => onDelete(task))}
-              >
-                <Trash2 className="h-4 w-4" />
-                Delete
-              </button>
-            </div>
-          )}
+            <span className="material-icons-round text-lg">edit</span>
+          </button>
+          <button
+            onClick={() => onDelete(task)}
+            className="p-2 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg text-slate-400 hover:text-red-500"
+            aria-label="Delete task"
+          >
+            <span className="material-icons-round text-lg">delete_outline</span>
+          </button>
         </div>
-      </CardFooter>
-    </Card>
+      </div>
+
+      {/* Info rows */}
+      <div className="space-y-2 mb-6 text-sm">
+        <div className="flex gap-2">
+          <span className="text-slate-400 w-16">Output:</span>
+          <span className="text-slate-700 dark:text-slate-300 truncate" title={task.output_file_name}>
+            {task.output_file_name}
+          </span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-slate-400 w-16">Path:</span>
+          <span className="text-slate-700 dark:text-slate-300 truncate" title={task.output_path}>
+            {truncatePath(task.output_path)}
+          </span>
+        </div>
+        <div className="flex gap-2">
+          <span className="text-slate-400 w-16">Limit:</span>
+          <span className="text-slate-700 dark:text-slate-300">
+            {task.test_row_limit ? `${task.test_row_limit} rows` : 'Unlimited'}
+          </span>
+        </div>
+      </div>
+
+      {/* Action buttons */}
+      <div className="flex gap-3">
+        <button
+          onClick={() => onRun(task, false)}
+          className="flex-1 bg-primary text-white py-2.5 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-indigo-700 transition-colors"
+        >
+          <span className="material-icons-round text-lg">play_arrow</span>
+          Run Task
+        </button>
+        <button
+          onClick={() => onRun(task, true)}
+          className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors font-semibold"
+        >
+          Test
+        </button>
+      </div>
+    </div>
   );
 }

@@ -3,19 +3,20 @@ import { forwardRef, type SelectHTMLAttributes } from 'react';
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   label?: string;
   error?: string;
+  hint?: string;
   options: { value: string; label: string }[];
 }
 
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(
-  ({ className = '', label, error, id, options, ...props }, ref) => {
+  ({ className = '', label, error, hint, id, options, ...props }, ref) => {
     const selectId = id || label?.toLowerCase().replace(/\s+/g, '-');
 
     return (
-      <div className="space-y-2">
+      <div className="space-y-1">
         {label && (
           <label
             htmlFor={selectId}
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            className="block text-sm font-medium text-gray-700 dark:text-gray-300"
           >
             {label}
           </label>
@@ -24,12 +25,14 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           ref={ref}
           id={selectId}
           className={`
-            flex h-10 w-full rounded-md border border-[hsl(var(--input))]
-            bg-transparent px-3 py-2 text-sm ring-offset-white
-            focus-visible:outline-none focus-visible:ring-2
-            focus-visible:ring-[hsl(var(--ring))] focus-visible:ring-offset-2
+            w-full bg-gray-50 dark:bg-gray-900
+            border border-gray-200 dark:border-gray-700
+            rounded-lg px-4 py-2.5
+            text-gray-900 dark:text-white text-sm
+            focus:ring-2 focus:ring-primary focus:border-primary
+            transition-all
             disabled:cursor-not-allowed disabled:opacity-50
-            ${error ? 'border-[hsl(var(--destructive))]' : ''}
+            ${error ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : ''}
             ${className}
           `}
           {...props}
@@ -40,7 +43,10 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
             </option>
           ))}
         </select>
-        {error && <p className="text-sm text-[hsl(var(--destructive))]">{error}</p>}
+        {hint && !error && (
+          <p className="text-xs text-gray-400 dark:text-gray-500">{hint}</p>
+        )}
+        {error && <p className="text-sm text-red-500">{error}</p>}
       </div>
     );
   }

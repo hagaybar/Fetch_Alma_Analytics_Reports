@@ -14,49 +14,52 @@ export function Dashboard() {
   const runningJobs = jobs.filter((j) => j.status === 'running' || j.status === 'pending').length;
 
   const stats = [
-    { label: 'Total Tasks', value: tasks.length, icon: ListTodo, color: 'text-blue-600' },
-    { label: 'Running Jobs', value: runningJobs, icon: Play, color: 'text-amber-600' },
-    { label: 'Completed', value: completedJobs, icon: CheckCircle, color: 'text-green-600' },
-    { label: 'Failed', value: failedJobs, icon: AlertCircle, color: 'text-red-600' },
+    { label: 'Total Tasks', value: tasks.length, icon: ListTodo, color: 'text-blue-600', bgColor: 'bg-blue-50 dark:bg-blue-900/30' },
+    { label: 'Running Jobs', value: runningJobs, icon: Play, color: 'text-amber-600', bgColor: 'bg-amber-50 dark:bg-amber-900/30' },
+    { label: 'Completed', value: completedJobs, icon: CheckCircle, color: 'text-green-600', bgColor: 'bg-green-50 dark:bg-green-900/30' },
+    { label: 'Failed', value: failedJobs, icon: AlertCircle, color: 'text-red-600', bgColor: 'bg-red-50 dark:bg-red-900/30' },
   ];
 
   return (
-    <div>
+    <div className="p-8">
       <Header
         title="Dashboard"
+        description="Overview of your Alma Analytics report tasks and jobs."
         onRefresh={() => {
           fetchTasks();
           fetchJobs();
         }}
       />
 
-      <div className="p-10">
-        <h2 className="text-lg font-medium text-[hsl(var(--muted-foreground))] mb-4">Overview</h2>
-        <div className="mb-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="mb-10">
+        <h3 className="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-4">Overview</h3>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => (
-            <Card key={stat.label}>
+            <Card key={stat.label} className="hover:shadow-xl transition-shadow">
               <CardContent className="flex items-center gap-4 p-6">
-                <div className={`rounded-full bg-gray-100 p-3 ${stat.color}`}>
+                <div className={`rounded-xl p-3 ${stat.bgColor} ${stat.color}`}>
                   <stat.icon className="h-6 w-6" />
                 </div>
                 <div>
                   <p className="text-4xl font-bold">{stat.value}</p>
-                  <p className="text-sm text-[hsl(var(--muted-foreground))]">{stat.label}</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{stat.label}</p>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
+      </section>
 
+      <section>
         <Card>
           <CardHeader>
             <CardTitle>Recent Jobs</CardTitle>
           </CardHeader>
           <CardContent>
             {jobsLoading ? (
-              <p className="py-8 text-center text-[hsl(var(--muted-foreground))]">Loading...</p>
+              <p className="py-8 text-center text-slate-500 dark:text-slate-400">Loading...</p>
             ) : recentJobs.length === 0 ? (
-              <p className="py-8 text-center text-[hsl(var(--muted-foreground))]">
+              <p className="py-8 text-center text-slate-500 dark:text-slate-400">
                 No jobs have been run yet
               </p>
             ) : (
@@ -68,7 +71,7 @@ export function Dashboard() {
             )}
           </CardContent>
         </Card>
-      </div>
+      </section>
     </div>
   );
 }

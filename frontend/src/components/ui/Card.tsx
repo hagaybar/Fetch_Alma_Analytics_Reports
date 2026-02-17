@@ -7,7 +7,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
 export function Card({ className = '', children, ...props }: CardProps) {
   return (
     <div
-      className={`rounded-2xl border border-[hsl(var(--border))]/50 bg-[hsl(var(--card))] text-[hsl(var(--card-foreground))] shadow-sm ${className}`}
+      className={`bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:shadow-xl transition-shadow group ${className}`}
       {...props}
     >
       {children}
@@ -17,7 +17,7 @@ export function Card({ className = '', children, ...props }: CardProps) {
 
 export function CardHeader({ className = '', children, ...props }: CardProps) {
   return (
-    <div className={`flex flex-col space-y-1.5 p-6 ${className}`} {...props}>
+    <div className={`flex flex-col space-y-1.5 mb-4 ${className}`} {...props}>
       {children}
     </div>
   );
@@ -25,7 +25,7 @@ export function CardHeader({ className = '', children, ...props }: CardProps) {
 
 export function CardTitle({ className = '', children, ...props }: CardProps) {
   return (
-    <h3 className={`text-lg font-semibold leading-none tracking-tight ${className}`} {...props}>
+    <h3 className={`text-lg font-bold leading-none tracking-tight ${className}`} {...props}>
       {children}
     </h3>
   );
@@ -33,7 +33,7 @@ export function CardTitle({ className = '', children, ...props }: CardProps) {
 
 export function CardDescription({ className = '', children, ...props }: CardProps) {
   return (
-    <p className={`text-sm text-[hsl(var(--muted-foreground))] ${className}`} {...props}>
+    <p className={`text-sm text-slate-500 dark:text-slate-400 ${className}`} {...props}>
       {children}
     </p>
   );
@@ -41,7 +41,7 @@ export function CardDescription({ className = '', children, ...props }: CardProp
 
 export function CardContent({ className = '', children, ...props }: CardProps) {
   return (
-    <div className={`p-6 pt-0 ${className}`} {...props}>
+    <div className={`space-y-2 mb-6 text-sm ${className}`} {...props}>
       {children}
     </div>
   );
@@ -49,7 +49,7 @@ export function CardContent({ className = '', children, ...props }: CardProps) {
 
 export function CardFooter({ className = '', children, ...props }: CardProps) {
   return (
-    <div className={`flex items-center px-6 py-4 border-t border-[hsl(var(--border))]/50 ${className}`} {...props}>
+    <div className={`flex gap-3 ${className}`} {...props}>
       {children}
     </div>
   );

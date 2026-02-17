@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Edit Task Modal Variant 2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#4F46E5",
+                        "background-light": "#F9FAFB",
+                        "background-dark": "#111827",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 10px; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4">
+<div class="fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-40"></div>
+<div class="relative z-50 w-full max-w-2xl bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700 animate-in fade-in zoom-in duration-300">
+<div class="px-6 py-4 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between bg-white dark:bg-gray-800 sticky top-0 z-10">
+<div>
+<h2 class="text-xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+<span class="material-icons-outlined text-primary">edit</span>
+                    Edit Task: <span class="text-primary">aas_loans</span>
+</h2>
+<p class="text-sm text-gray-500 dark:text-gray-400">Update your report configuration and test settings</p>
+</div>
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full transition-colors">
+<span class="material-icons-outlined text-gray-400">close</span>
+</button>
+</div>
+<div class="p-6 max-h-[75vh] overflow-y-auto custom-scrollbar">
+<form class="space-y-8">
+<section>
+<div class="flex items-center gap-2 mb-4">
+<span class="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-primary flex items-center justify-center">
+<span class="material-icons-outlined text-sm">info</span>
+</span>
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">Basic Info</h3>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Task Name</label>
+<input class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-gray-900 dark:text-white px-4 py-2.5 transition-all" type="text" value="aas_loans"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Alma Report Path</label>
+<div class="relative">
+<span class="material-icons-outlined absolute left-3 top-3 text-gray-400 text-lg">folder_open</span>
+<input class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-gray-900 dark:text-white pl-10 pr-4 py-2.5 transition-all font-mono text-sm" type="text" value="/shared/Tel Aviv University/Reports/Masedet/AAS Loans"/>
+</div>
+<p class="mt-1.5 text-xs text-gray-400 dark:text-gray-500">The internal path within the Alma Analytics repository.</p>
+</div>
+</div>
+</section>
+<hr class="border-gray-100 dark:border-gray-700"/>
+<section>
+<div class="flex items-center gap-2 mb-4">
+<span class="w-8 h-8 rounded-lg bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center">
+<span class="material-icons-outlined text-sm">file_download</span>
+</span>
+<h3 class="text-sm font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">Output Settings</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Output Path</label>
+<input class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-gray-900 dark:text-white px-4 py-2.5 transition-all text-sm" type="text" value="D:\Tel-Aviv University\masedet - Documents\Data\Alma\Loans\AAS"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Output File Name</label>
+<input class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-gray-900 dark:text-white px-4 py-2.5 transition-all text-sm" type="text" value="AAS Loans.xlsx"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Frequency</label>
+<select class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-gray-900 dark:text-white px-4 py-2.5 transition-all text-sm">
+<option>Daily</option>
+<option>Weekly</option>
+<option>Monthly</option>
+<option>On Demand</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Output Format</label>
+<select class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-gray-900 dark:text-white px-4 py-2.5 transition-all text-sm">
+<option>Excel (xlsx)</option>
+<option>CSV (csv)</option>
+<option>TSV (tsv)</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Log Directory</label>
+<input class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-gray-900 dark:text-white px-4 py-2.5 transition-all text-sm" type="text" value="D:\Tel-Aviv University\masedet - Logs"/>
+</div>
+</div>
+</section>
+<hr class="border-gray-100 dark:border-gray-700"/>
+<section class="bg-blue-50/50 dark:bg-blue-900/10 p-5 rounded-xl border border-blue-100 dark:border-blue-900/50">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 flex items-center justify-center">
+<span class="material-icons-outlined text-sm">science</span>
+</span>
+<h3 class="text-sm font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400">Testing &amp; Debugging</h3>
+</div>
+<div class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Test Output Path</label>
+<input class="w-full bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-gray-900 dark:text-white px-4 py-2.5 transition-all text-sm shadow-sm" type="text" value="D:\Tel-Aviv University\masedet - Test\Loans"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Test Log Directory</label>
+<input class="w-full bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-gray-900 dark:text-white px-4 py-2.5 transition-all text-sm shadow-sm" type="text" value="D:\Tel-Aviv University\masedet - Test\Logs"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Test Row Limit</label>
+<div class="flex items-center gap-3">
+<input class="w-32 bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg focus:ring-primary focus:border-primary text-gray-900 dark:text-white px-4 py-2.5 transition-all text-sm shadow-sm" type="number" value="25"/>
+<span class="text-sm text-gray-500 dark:text-gray-400">Maximum rows retrieved during test runs</span>
+</div>
+</div>
+</div>
+</section>
+</form>
+</div>
+<div class="px-6 py-4 border-t border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 flex items-center justify-between">
+<button class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors" type="button">
+                Delete Task
+            </button>
+<div class="flex items-center gap-3">
+<button class="px-5 py-2.5 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-600 transition-all shadow-sm" type="button">
+                    Cancel
+                </button>
+<button class="px-5 py-2.5 text-sm font-medium text-white bg-primary rounded-lg hover:bg-indigo-700 transition-all shadow-md shadow-indigo-200 dark:shadow-none" type="button">
+                    Save Changes
+                </button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-4 right-4 z-50">
+<button class="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg border border-gray-200 dark:border-gray-700 flex items-center justify-center" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-outlined text-gray-700 dark:text-gray-200">dark_mode</span>
+</button>
+</div>
+
+</body></html>
