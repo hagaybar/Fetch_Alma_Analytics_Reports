@@ -40,7 +40,7 @@ export function TaskCard({ task, onEdit, onDelete, onRun, onViewLogs }: TaskCard
         <div className="flex items-start justify-between">
           <CardTitle className="text-lg font-semibold">{task.name}</CardTitle>
           <div className="flex gap-2">
-            <Badge variant="secondary" className="flex items-center gap-1">
+            <Badge variant="default" className="flex items-center gap-1">
               <Calendar className="h-3 w-3" />
               {task.frequency || 'daily'}
             </Badge>
