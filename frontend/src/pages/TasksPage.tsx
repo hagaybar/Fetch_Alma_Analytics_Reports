@@ -67,6 +67,27 @@ export function TasksPage() {
     navigate(`/logs?task=${encodeURIComponent(task.name)}`);
   };
 
+  const handleToggleActive = async (task: Task) => {
+    try {
+      const updatedTask: TaskUpdate = {
+        alma_report_path: task.alma_report_path,
+        output_path: task.output_path,
+        output_file_name: task.output_file_name,
+        output_format: task.output_format,
+        log_dir: task.log_dir,
+        test_output_path: task.test_output_path,
+        test_log_dir: task.test_log_dir,
+        test_row_limit: task.test_row_limit,
+        frequency: task.frequency,
+        active: task.active === false ? true : false,
+      };
+      await updateTask(task.name, updatedTask);
+      showToast(`Task ${task.active !== false ? 'deactivated' : 'activated'} successfully`, 'success');
+    } catch (err) {
+      showToast(err instanceof Error ? err.message : 'Failed to toggle task status', 'error');
+    }
+  };
+
   return (
     <div>
       <Header
@@ -89,6 +110,7 @@ export function TasksPage() {
           onDelete={setDeletingTask}
           onRun={handleRun}
           onViewLogs={handleViewLogs}
+          onToggleActive={handleToggleActive}
         />
       </div>
 

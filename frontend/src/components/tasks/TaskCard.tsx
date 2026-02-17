@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Play, Edit2, Trash2, FileText, TestTube, MoreVertical, Calendar } from 'lucide-react';
+import { Play, Edit2, Trash2, FileText, TestTube, MoreVertical, Calendar, Power, PowerOff } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
@@ -11,9 +11,10 @@ interface TaskCardProps {
   onDelete: (task: Task) => void;
   onRun: (task: Task, testMode: boolean) => void;
   onViewLogs: (task: Task) => void;
+  onToggleActive: (task: Task) => void;
 }
 
-export function TaskCard({ task, onEdit, onDelete, onRun, onViewLogs }: TaskCardProps) {
+export function TaskCard({ task, onEdit, onDelete, onRun, onViewLogs, onToggleActive }: TaskCardProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const formatBadge = task.output_format.toUpperCase();
@@ -34,11 +35,18 @@ export function TaskCard({ task, onEdit, onDelete, onRun, onViewLogs }: TaskCard
     action();
   };
 
+  const isActive = task.active !== false; // Default to true if undefined
+
   return (
-    <Card className="flex flex-col">
+    <Card className={`flex flex-col ${!isActive ? 'opacity-60' : ''}`}>
       <CardHeader className="pb-4">
         <div className="flex items-start justify-between">
-          <CardTitle className="text-lg font-semibold">{task.name}</CardTitle>
+          <div className="flex items-center gap-2">
+            <CardTitle className="text-lg font-semibold">{task.name}</CardTitle>
+            <Badge variant={isActive ? 'success' : 'warning'}>
+              {isActive ? 'Active' : 'Inactive'}
+            </Badge>
+          </div>
           <div className="flex gap-2">
             <Badge variant="default" className="flex items-center gap-1">
               <Calendar className="h-3 w-3" />
@@ -83,6 +91,22 @@ export function TaskCard({ task, onEdit, onDelete, onRun, onViewLogs }: TaskCard
           </Button>
           {menuOpen && (
             <div className="absolute right-0 top-full mt-1 z-50 min-w-[140px] rounded-md border border-[hsl(var(--border))] bg-[hsl(var(--card))] shadow-lg">
+              <button
+                className="flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-[hsl(var(--accent))] text-left"
+                onClick={() => handleMenuAction(() => onToggleActive(task))}
+              >
+                {isActive ? (
+                  <>
+                    <PowerOff className="h-4 w-4" />
+                    Deactivate
+                  </>
+                ) : (
+                  <>
+                    <Power className="h-4 w-4" />
+                    Activate
+                  </>
+                )}
+              </button>
               <button
                 className="flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-[hsl(var(--accent))] text-left"
                 onClick={() => handleMenuAction(() => onViewLogs(task))}

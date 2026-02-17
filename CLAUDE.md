@@ -73,6 +73,41 @@ reports_config.json            # Task configurations
 - `frontend/src/api/client.ts` - API client with typed endpoints
 - `frontend/src/hooks/useJobs.ts` - Job polling with auto-refresh
 
+## Task Configuration
+
+Each task in `reports_config.json` has the following fields:
+
+| Field | Type | Required | Default | Description |
+|-------|------|----------|---------|-------------|
+| `ALMA_REPORT_PATH` | string | Yes | - | URL-encoded path to the Alma Analytics report |
+| `OUTPUT_PATH` | string | Yes | - | Directory where output files are saved |
+| `OUTPUT_FILE_NAME` | string | Yes | - | Name of the output file |
+| `OUTPUT_FORMAT` | string | Yes | `xlsx` | Output format: `xlsx`, `csv`, or `tsv` |
+| `LOG_DIR` | string | Yes | - | Directory for log files |
+| `TEST_OUTPUT_PATH` | string | No | - | Output directory for test mode |
+| `TEST_LOG_DIR` | string | No | - | Log directory for test mode |
+| `TEST_ROW_LIMIT` | int | No | `25` | Max rows to fetch in test mode |
+| `FREQUENCY` | string | No | `daily` | Scheduling frequency: `daily` or `weekly` |
+| `ACTIVE` | bool | No | `true` | Whether task is included in batch runs |
+
+### Active Filter
+
+Tasks can be marked as **active** or **inactive**:
+- **Active tasks** (default): Included in batch report runs
+- **Inactive tasks**: Excluded from batch runs but can still be run manually
+
+Toggle active status via the UI (More actions → Activate/Deactivate) or API.
+
+### Batch Scheduling
+
+Run all active tasks matching a frequency:
+```bash
+python fetch_reports_from_alma_analytics.py --config reports_config.json --report-type daily
+python fetch_reports_from_alma_analytics.py --config reports_config.json --report-type weekly
+```
+
+Only tasks with matching `FREQUENCY` **and** `ACTIVE=true` are executed.
+
 ## API Endpoints
 
 ```

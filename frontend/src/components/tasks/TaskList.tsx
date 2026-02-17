@@ -8,9 +8,10 @@ interface TaskListProps {
   onDelete: (task: Task) => void;
   onRun: (task: Task, testMode: boolean) => void;
   onViewLogs: (task: Task) => void;
+  onToggleActive: (task: Task) => void;
 }
 
-export function TaskList({ tasks, loading, onEdit, onDelete, onRun, onViewLogs }: TaskListProps) {
+export function TaskList({ tasks, loading, onEdit, onDelete, onRun, onViewLogs, onToggleActive }: TaskListProps) {
   if (loading) {
     return (
       <div className="flex h-64 items-center justify-center text-[hsl(var(--muted-foreground))]">
@@ -38,6 +39,7 @@ export function TaskList({ tasks, loading, onEdit, onDelete, onRun, onViewLogs }
           onDelete={onDelete}
           onRun={onRun}
           onViewLogs={onViewLogs}
+          onToggleActive={onToggleActive}
         />
       ))}
     </div>

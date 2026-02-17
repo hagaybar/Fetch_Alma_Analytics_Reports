@@ -12,6 +12,7 @@ class TaskBase(BaseModel):
     test_log_dir: Optional[str] = None
     test_row_limit: int = 25
     frequency: Optional[Literal["daily", "weekly"]] = "daily"
+    active: bool = True
 
 
 class TaskCreate(TaskBase):

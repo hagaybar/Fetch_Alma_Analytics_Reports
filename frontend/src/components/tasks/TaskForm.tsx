@@ -34,6 +34,7 @@ const defaultValues: TaskCreate = {
   test_log_dir: '',
   test_row_limit: 25,
   frequency: 'daily',
+  active: true,
 };
 
 export function TaskForm({ isOpen, onClose, onSubmit, task }: TaskFormProps) {
@@ -56,6 +57,7 @@ export function TaskForm({ isOpen, onClose, onSubmit, task }: TaskFormProps) {
         test_log_dir: task.test_log_dir || '',
         test_row_limit: task.test_row_limit,
         frequency: task.frequency || 'daily',
+        active: task.active !== false, // Default to true if undefined
       });
     } else {
       setFormData(defaultValues);
@@ -63,7 +65,7 @@ export function TaskForm({ isOpen, onClose, onSubmit, task }: TaskFormProps) {
     setErrors({});
   }, [task, isOpen]);
 
-  const handleChange = (field: keyof TaskCreate, value: string | number) => {
+  const handleChange = (field: keyof TaskCreate, value: string | number | boolean) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) {
       setErrors((prev) => ({ ...prev, [field]: '' }));
@@ -121,14 +123,30 @@ export function TaskForm({ isOpen, onClose, onSubmit, task }: TaskFormProps) {
           <p className="text-sm text-[hsl(var(--destructive))]">{errors.submit}</p>
         )}
 
-        <Input
-          label="Task Name"
-          value={formData.name}
-          onChange={(e) => handleChange('name', e.target.value)}
-          error={errors.name}
-          disabled={isEditing}
-          placeholder="e.g., aas_loans"
-        />
+        <div className="flex items-center gap-4">
+          <div className="flex-1">
+            <Input
+              label="Task Name"
+              value={formData.name}
+              onChange={(e) => handleChange('name', e.target.value)}
+              error={errors.name}
+              disabled={isEditing}
+              placeholder="e.g., aas_loans"
+            />
+          </div>
+          <div className="flex items-center gap-2 pt-6">
+            <input
+              type="checkbox"
+              id="active"
+              checked={formData.active}
+              onChange={(e) => handleChange('active', e.target.checked)}
+              className="h-4 w-4 rounded border-[hsl(var(--border))] text-[hsl(var(--primary))] focus:ring-[hsl(var(--primary))]"
+            />
+            <label htmlFor="active" className="text-sm font-medium text-[hsl(var(--foreground))]">
+              Active
+            </label>
+          </div>
+        </div>
 
         <Input
           label="Alma Report Path"

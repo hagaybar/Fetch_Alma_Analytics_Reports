@@ -227,11 +227,12 @@ def run_batch_reports(all_configs, report_type, args):
         print("Error: ALMA_PROD_API_KEY environment variable not set")
         return 0, 0, []
 
-    # Filter configs by frequency
+    # Filter configs by frequency and active status
     matching_tasks = []
     for task_name, config in all_configs.items():
         frequency = config.get('FREQUENCY', '').lower()
-        if frequency == report_type.lower():
+        is_active = config.get('ACTIVE', True)
+        if frequency == report_type.lower() and is_active:
             matching_tasks.append((task_name, config))
 
     if not matching_tasks:

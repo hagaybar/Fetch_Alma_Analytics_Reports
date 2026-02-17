@@ -9,6 +9,7 @@ export interface Task {
   test_log_dir?: string;
   test_row_limit: number;
   frequency?: 'daily' | 'weekly';
+  active: boolean;
 }
 
 export interface TaskCreate {
@@ -22,6 +23,7 @@ export interface TaskCreate {
   test_log_dir?: string;
   test_row_limit: number;
   frequency?: 'daily' | 'weekly';
+  active: boolean;
 }
 
 export interface TaskUpdate {
@@ -34,6 +36,7 @@ export interface TaskUpdate {
   test_log_dir?: string;
   test_row_limit: number;
   frequency?: 'daily' | 'weekly';
+  active: boolean;
 }
 
 export type JobStatus = 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';
