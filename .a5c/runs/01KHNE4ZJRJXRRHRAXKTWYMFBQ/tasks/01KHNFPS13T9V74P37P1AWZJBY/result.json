@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHNFPS13T9V74P37P1AWZJBY",
+  "taskId": "visual-verification",
+  "invocationKey": "ui-redesign:S000011:visual-verification",
+  "status": "ok",
+  "result": {
+    "issues": [],
+    "passed": true,
+    "screenshots": [
+      "tasks-page-final.png",
+      "edit-modal-final.png"
+    ],
+    "verification": {
+      "gridLayout": "Verified - Two-column grid on xl screens",
+      "header": "Verified - Title, subtitle, Refresh and New Task buttons",
+      "sidebar": "Verified - Fixed sidebar with Alma Reports branding, Material Icons, active state working",
+      "taskCards": "Verified - White cards with indigo icon box, frequency badges (Daily green, Weekly blue), format badges, Run Task/Test buttons",
+      "taskFormModal": "Verified - Sectioned layout with BASIC INFO, OUTPUT SETTINGS, TESTING & DEBUGGING sections, proper icons, Delete Task/Cancel/Save buttons"
+    }
+  },
+  "startedAt": "2026-02-17T09:44:38.054Z",
+  "finishedAt": "2026-02-17T09:44:38.054Z",
+  "value": {
+    "issues": [],
+    "passed": true,
+    "screenshots": [
+      "tasks-page-final.png",
+      "edit-modal-final.png"
+    ],
+    "verification": {
+      "gridLayout": "Verified - Two-column grid on xl screens",
+      "header": "Verified - Title, subtitle, Refresh and New Task buttons",
+      "sidebar": "Verified - Fixed sidebar with Alma Reports branding, Material Icons, active state working",
+      "taskCards": "Verified - White cards with indigo icon box, frequency badges (Daily green, Weekly blue), format badges, Run Task/Test buttons",
+      "taskFormModal": "Verified - Sectioned layout with BASIC INFO, OUTPUT SETTINGS, TESTING & DEBUGGING sections, proper icons, Delete Task/Cancel/Save buttons"
+    }
+  }
+}

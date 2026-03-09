@@ -296,7 +296,10 @@ Thumbs.db
 *~
 
 # Babysitter orchestration
-.a5c/
+.a5c/*
+!.a5c/runs/
+!.a5c/processes/
+.a5c/node_modules/
 
 # OS generated files
 *.tmp

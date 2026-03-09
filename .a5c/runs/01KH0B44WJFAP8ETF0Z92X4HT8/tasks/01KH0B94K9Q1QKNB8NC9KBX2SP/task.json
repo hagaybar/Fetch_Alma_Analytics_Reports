@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH0B94K9Q1QKNB8NC9KBX2SP",
+  "taskId": "redesign-cards",
+  "invocationKey": "ui-theme-redesign:S000003:redesign-cards",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Redesign cards for cleaner, spacious look",
+  "io": {
+    "inputJsonPath": "tasks/01KH0B94K9Q1QKNB8NC9KBX2SP/input.json",
+    "outputJsonPath": "tasks/01KH0B94K9Q1QKNB8NC9KBX2SP/result.json"
+  },
+  "inputs": {}
+}

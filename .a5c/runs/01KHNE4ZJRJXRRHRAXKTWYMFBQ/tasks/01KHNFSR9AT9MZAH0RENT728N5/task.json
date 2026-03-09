@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNFSR9AT9MZAH0RENT728N5",
+  "taskId": "build-check",
+  "invocationKey": "ui-redesign:S000012:build-check",
+  "stepId": "S000012",
+  "kind": "shell",
+  "title": "Build Check",
+  "description": "Verify the frontend builds without errors",
+  "io": {
+    "outputJsonPath": "tasks/01KHNFSR9AT9MZAH0RENT728N5/result.json"
+  },
+  "inputs": {}
+}

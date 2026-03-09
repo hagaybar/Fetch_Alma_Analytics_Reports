@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T09:44:43.571Z",
+  "data": {
+    "effectId": "01KHNFSR9AT9MZAH0RENT728N5",
+    "invocationKey": "ui-redesign:S000012:build-check",
+    "invocationHash": "f23dee5ed5f1dfd1cafa484e62b8dcadb38c5db599c3f0c1412e8e0cade04e88",
+    "stepId": "S000012",
+    "taskId": "build-check",
+    "kind": "shell",
+    "label": "Build Check",
+    "taskDefRef": "tasks/01KHNFSR9AT9MZAH0RENT728N5/task.json"
+  },
+  "checksum": "a0528168b1069aadea2ca99f6cc860bfafc27e658bda5f9e47f9769e62894ac7"
+}

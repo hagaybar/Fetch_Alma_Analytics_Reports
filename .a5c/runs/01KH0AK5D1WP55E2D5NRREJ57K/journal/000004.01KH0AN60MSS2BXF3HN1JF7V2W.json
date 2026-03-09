@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-09T04:30:47.828Z",
+  "data": {
+    "effectId": "01KH0AN607X82MSPHQB91WPWZQ",
+    "invocationKey": "fix-sidebar-overflow:S000002:verify-visual",
+    "invocationHash": "5eb4136fea34ecf4ba5afb6cb8dbf347600f8f899ccbf5409496121b990b5d1a",
+    "stepId": "S000002",
+    "taskId": "verify-visual",
+    "kind": "agent",
+    "label": "Verify fix visually in browser",
+    "taskDefRef": "tasks/01KH0AN607X82MSPHQB91WPWZQ/task.json"
+  },
+  "checksum": "a053d787a0d8ef8061589341a53e640b9748864c040df2a673304b47ea9f9831"
+}

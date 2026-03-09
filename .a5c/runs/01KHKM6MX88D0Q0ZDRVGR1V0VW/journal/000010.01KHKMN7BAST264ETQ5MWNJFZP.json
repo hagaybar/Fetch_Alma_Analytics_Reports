@@ -1,0 +1,18 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-16T16:31:09.162Z",
+  "data": {
+    "effectId": "01KHKMN7AXKZ1P8RV6NAB0T46V",
+    "invocationKey": "batch-scheduling-feature:S000005:__sdk.breakpoint",
+    "invocationHash": "5ca7253b6f6385488966a1d63ed312288ea840e36979d62ccb914cdbeb67cf25",
+    "stepId": "S000005",
+    "taskId": "__sdk.breakpoint",
+    "kind": "breakpoint",
+    "label": "breakpoint",
+    "taskDefRef": "tasks/01KHKMN7AXKZ1P8RV6NAB0T46V/task.json",
+    "labels": [
+      "breakpoint"
+    ]
+  },
+  "checksum": "08eca68a6fc7ca83f85872ab0da72dcc0918947a91f4c9d2e01984f3812debb5"
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHNWM02C6DASYHMZMXDNJ53D",
+  "taskId": "implement-backend",
+  "invocationKey": "add-active-filter-feature:S000001:implement-backend",
+  "status": "ok",
+  "result": {
+    "filesModified": [
+      "backend/models/task.py",
+      "backend/core/config_manager.py",
+      "fetch_reports_from_alma_analytics.py"
+    ],
+    "success": true,
+    "summary": "Added 'active' boolean field to task configuration with default value True. Changes: (1) Added 'active: bool = True' to TaskBase model in task.py, (2) Updated _task_from_dict in config_manager.py to read ACTIVE field with default True for backwards compatibility, (3) Updated _task_to_dict in config_manager.py to write ACTIVE field to JSON config, (4) Updated run_batch_reports in fetch_reports_from_alma_analytics.py to filter by active=True when filtering by frequency. Existing tasks without ACTIVE field will default to True ensuring backwards compatibility."
+  },
+  "startedAt": "2026-02-17T13:29:41.221Z",
+  "finishedAt": "2026-02-17T13:29:41.221Z",
+  "value": {
+    "filesModified": [
+      "backend/models/task.py",
+      "backend/core/config_manager.py",
+      "fetch_reports_from_alma_analytics.py"
+    ],
+    "success": true,
+    "summary": "Added 'active' boolean field to task configuration with default value True. Changes: (1) Added 'active: bool = True' to TaskBase model in task.py, (2) Updated _task_from_dict in config_manager.py to read ACTIVE field with default True for backwards compatibility, (3) Updated _task_to_dict in config_manager.py to write ACTIVE field to JSON config, (4) Updated run_batch_reports in fetch_reports_from_alma_analytics.py to filter by active=True when filtering by frequency. Existing tasks without ACTIVE field will default to True ensuring backwards compatibility."
+  }
+}

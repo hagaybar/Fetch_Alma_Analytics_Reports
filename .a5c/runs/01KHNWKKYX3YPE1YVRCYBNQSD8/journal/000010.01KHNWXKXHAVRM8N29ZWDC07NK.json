@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T13:34:01.649Z",
+  "data": {
+    "effectId": "01KHNWXKX5A4B6EB64EG7ENKSV",
+    "invocationKey": "add-active-filter-feature:S000005:integration-test",
+    "invocationHash": "5e7b00a644093f235c754485fcc6e139e78a2d9313087f254763c947d23d07e0",
+    "stepId": "S000005",
+    "taskId": "integration-test",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KHNWXKX5A4B6EB64EG7ENKSV/task.json",
+    "labels": [
+      "agent",
+      "integration",
+      "testing"
+    ]
+  },
+  "checksum": "2687588e58eaeabda208195d755fc3bd80abd6465b9b93e7dcdf38b545f85ff0"
+}

@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T13:28:46.434Z",
+  "data": {
+    "effectId": "01KHNWM02C6DASYHMZMXDNJ53D",
+    "invocationKey": "add-active-filter-feature:S000001:implement-backend",
+    "invocationHash": "eae343543ff2b0065a478156c6f1417970461c2d729ff17641d32dccf81863da",
+    "stepId": "S000001",
+    "taskId": "implement-backend",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KHNWM02C6DASYHMZMXDNJ53D/task.json",
+    "labels": [
+      "agent",
+      "backend",
+      "implementation"
+    ]
+  },
+  "checksum": "68b79ff9bfccbe80fa06a8ee59ac47cfcd8a706a223fedcae14875818ac1a869"
+}

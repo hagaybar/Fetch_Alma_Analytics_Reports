@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-09T04:30:02.320Z",
+  "data": {
+    "effectId": "01KH0AKSJ40GK754ZZWZNV9GRQ",
+    "invocationKey": "fix-sidebar-overflow:S000001:fix-overflow",
+    "invocationHash": "9b43411e305a795131f62ebe04c147adb399f1b4dc929f63fe4b8264cde35581",
+    "stepId": "S000001",
+    "taskId": "fix-overflow",
+    "kind": "agent",
+    "label": "Fix sidebar overflow in MainLayout",
+    "taskDefRef": "tasks/01KH0AKSJ40GK754ZZWZNV9GRQ/task.json"
+  },
+  "checksum": "b63dd170eaf55efb3b915c8fe4720097cf16d6be06024c86169c52ee7be0263e"
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNWXKX5A4B6EB64EG7ENKSV",
+  "taskId": "integration-test",
+  "invocationKey": "add-active-filter-feature:S000005:integration-test",
+  "stepId": "S000005",
+  "kind": "agent",
+  "title": "Integration testing",
+  "labels": [
+    "agent",
+    "integration",
+    "testing"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KHNWXKX5A4B6EB64EG7ENKSV/input.json",
+    "outputJsonPath": "tasks/01KHNWXKX5A4B6EB64EG7ENKSV/result.json"
+  },
+  "inputs": {
+    "featureName": "active-filter"
+  }
+}

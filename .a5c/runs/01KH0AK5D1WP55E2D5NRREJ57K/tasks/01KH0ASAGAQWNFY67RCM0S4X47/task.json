@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH0ASAGAQWNFY67RCM0S4X47",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "fix-sidebar-overflow:S000003:__sdk.breakpoint",
+  "stepId": "S000003",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Visual verification failed: undefined. Should we try another approach?",
+      "title": "Fix Not Verified"
+    },
+    "requestedAt": "2026-02-09T04:33:03.498Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "question": "Visual verification failed: undefined. Should we try another approach?",
+      "title": "Fix Not Verified"
+    },
+    "requestedAt": "2026-02-09T04:33:03.498Z"
+  }
+}

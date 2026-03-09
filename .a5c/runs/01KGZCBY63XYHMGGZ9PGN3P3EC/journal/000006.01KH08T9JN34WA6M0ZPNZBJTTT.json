@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-09T03:58:38.165Z",
+  "data": {
+    "effectId": "01KH08T9J8ZVNCVMFFASX9Y7KN",
+    "invocationKey": "ui-redesign:S000003:fix-sidebar",
+    "invocationHash": "e3d47eaf5bd2b4afa1cd22785322c051f48a2b9bae70d06c64797517309b2565",
+    "stepId": "S000003",
+    "taskId": "fix-sidebar",
+    "kind": "agent",
+    "label": "Fix sidebar overflow issue",
+    "taskDefRef": "tasks/01KH08T9J8ZVNCVMFFASX9Y7KN/task.json"
+  },
+  "checksum": "f9a237b36e50946bf81386927d27400b79be8d13d82ec8c4e736d8c75e94f187"
+}

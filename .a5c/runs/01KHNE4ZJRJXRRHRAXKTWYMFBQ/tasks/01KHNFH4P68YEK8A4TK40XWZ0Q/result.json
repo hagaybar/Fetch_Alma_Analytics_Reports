@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHNFH4P68YEK8A4TK40XWZ0Q",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-redesign:S000008:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true,
+    "response": "User approved feature components. Continue to Phase 5."
+  },
+  "startedAt": "2026-02-17T09:40:45.218Z",
+  "finishedAt": "2026-02-17T09:40:45.218Z",
+  "value": {
+    "approved": true,
+    "response": "User approved feature components. Continue to Phase 5."
+  }
+}

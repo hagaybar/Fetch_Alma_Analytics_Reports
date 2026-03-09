@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "changes": "Updated CLI script with batch execution support. Added --report-type argument, run_single_report() and run_batch_reports() functions. Continues on error with summary logging.",
+  "newFeatures": [
+    "--report-type argument accepting daily or weekly",
+    "run_batch_reports() function with error handling",
+    "Summary logging with success/failure counts",
+    "Exit code 1 on any failure for CI/CD",
+    "Backward compatibility preserved"
+  ]
+}

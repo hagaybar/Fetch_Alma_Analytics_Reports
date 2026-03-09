@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KGZCCS6TD0SXG5XSADAYFA6V",
+  "taskId": "analyze-ui",
+  "invocationKey": "ui-redesign:S000001:analyze-ui",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Analyze current UI issues",
+  "io": {
+    "inputJsonPath": "tasks/01KGZCCS6TD0SXG5XSADAYFA6V/input.json",
+    "outputJsonPath": "tasks/01KGZCCS6TD0SXG5XSADAYFA6V/result.json"
+  },
+  "inputs": {
+    "designDirection": "Professional dashboard - data-focused, crisp typography, clear hierarchy, enterprise feel",
+    "issues": [
+      "Left sidebar hides some reports - critical overflow/layout bug",
+      "UI is not inviting and looks dense despite having few objects",
+      "Poor visual hierarchy",
+      "Cramped task cards with too many buttons"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHNWZV8T2J6MVADJCCGEXJPE",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "add-active-filter-feature:S000006:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true,
+    "response": "User approved the feature completion"
+  },
+  "startedAt": "2026-02-17T13:35:53.192Z",
+  "finishedAt": "2026-02-17T13:35:53.192Z",
+  "value": {
+    "approved": true,
+    "response": "User approved the feature completion"
+  }
+}

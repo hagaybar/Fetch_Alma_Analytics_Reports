@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHNFNP147631VNEP2M5KAH9R",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-redesign:S000010:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true,
+    "response": "User approved pages. Continue to quality verification."
+  },
+  "startedAt": "2026-02-17T09:43:02.723Z",
+  "finishedAt": "2026-02-17T09:43:02.723Z",
+  "value": {
+    "approved": true,
+    "response": "User approved pages. Continue to quality verification."
+  }
+}

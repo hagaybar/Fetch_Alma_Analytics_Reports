@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KH0PZJ97TF6GZMN13YAJ0Y5W",
+  "taskId": "verify-design",
+  "invocationKey": "ui-theme-redesign:S000005:verify-design",
+  "status": "ok",
+  "result": {
+    "issues": [],
+    "success": true
+  },
+  "startedAt": "2026-02-09T08:08:24.945Z",
+  "finishedAt": "2026-02-09T08:08:24.945Z",
+  "value": {
+    "issues": [],
+    "success": true
+  }
+}

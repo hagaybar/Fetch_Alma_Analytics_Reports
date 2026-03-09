@@ -1,0 +1,19 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-16T16:26:54.168Z",
+  "data": {
+    "effectId": "01KHKMDEAAV8PCHRVMNYP23AFP",
+    "invocationKey": "batch-scheduling-feature:S000001:update-pydantic-model",
+    "invocationHash": "5404bd596de142df80f773d21083c964855e2ece726e587fe639fbde9f7b85cc",
+    "stepId": "S000001",
+    "taskId": "update-pydantic-model",
+    "kind": "agent",
+    "label": "backend",
+    "taskDefRef": "tasks/01KHKMDEAAV8PCHRVMNYP23AFP/task.json",
+    "labels": [
+      "backend",
+      "model"
+    ]
+  },
+  "checksum": "8e962ddd5e4d5b7029b8d08228e3d534ca2dcc069dbd5be835a627f516442594"
+}

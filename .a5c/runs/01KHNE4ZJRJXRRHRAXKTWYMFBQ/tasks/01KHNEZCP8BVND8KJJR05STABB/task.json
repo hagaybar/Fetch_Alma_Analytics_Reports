@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNEZCP8BVND8KJJR05STABB",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-redesign:S000006:__sdk.breakpoint",
+  "stepId": "S000006",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "files": [
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/ui/Button.tsx"
+          },
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/ui/Card.tsx"
+          },
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/ui/Modal.tsx"
+          }
+        ]
+      },
+      "question": "UI components updated (Button, Card, Modal, Input, Select, Badge). Review and approve to continue?",
+      "title": "Phase 3: UI Components Review"
+    },
+    "requestedAt": "2026-02-17T09:30:19.720Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "files": [
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/ui/Button.tsx"
+          },
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/ui/Card.tsx"
+          },
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/ui/Modal.tsx"
+          }
+        ]
+      },
+      "question": "UI components updated (Button, Card, Modal, Input, Select, Badge). Review and approve to continue?",
+      "title": "Phase 3: UI Components Review"
+    },
+    "requestedAt": "2026-02-17T09:30:19.720Z"
+  }
+}

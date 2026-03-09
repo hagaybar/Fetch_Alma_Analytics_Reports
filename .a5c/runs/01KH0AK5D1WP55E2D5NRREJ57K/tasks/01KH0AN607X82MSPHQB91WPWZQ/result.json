@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KH0AN607X82MSPHQB91WPWZQ",
+  "taskId": "verify-visual",
+  "invocationKey": "fix-sidebar-overflow:S000002:verify-visual",
+  "status": "ok",
+  "result": {
+    "issue": "",
+    "screenshotPath": "troubleshoot/sidebar-fix-v2-dashboard.png",
+    "verified": true
+  },
+  "startedAt": "2026-02-09T04:32:58.642Z",
+  "finishedAt": "2026-02-09T04:32:58.642Z",
+  "value": {
+    "issue": "",
+    "screenshotPath": "troubleshoot/sidebar-fix-v2-dashboard.png",
+    "verified": true
+  }
+}

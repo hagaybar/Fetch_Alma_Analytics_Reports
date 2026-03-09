@@ -1,0 +1,19 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-16T16:33:28.348Z",
+  "data": {
+    "effectId": "01KHKMSF8GK7MMB7MVGK9JY13D",
+    "invocationKey": "batch-scheduling-feature:S000006:verify-implementation",
+    "invocationHash": "4443e39d4ad5a551f66b3ee0bb16662207a43a2d98f3b45c635ab1d6826210e1",
+    "stepId": "S000006",
+    "taskId": "verify-implementation",
+    "kind": "agent",
+    "label": "verification",
+    "taskDefRef": "tasks/01KHKMSF8GK7MMB7MVGK9JY13D/task.json",
+    "labels": [
+      "verification",
+      "qa"
+    ]
+  },
+  "checksum": "eeadb9fbe89c618ffe5c409435cf3d502596ad553dee7fdfc8b89e4d155b3c5d"
+}

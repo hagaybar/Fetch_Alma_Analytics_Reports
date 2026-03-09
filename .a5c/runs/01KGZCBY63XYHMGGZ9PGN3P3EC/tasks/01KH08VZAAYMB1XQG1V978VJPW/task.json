@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH08VZAAYMB1XQG1V978VJPW",
+  "taskId": "redesign-layout",
+  "invocationKey": "ui-redesign:S000004:redesign-layout",
+  "stepId": "S000004",
+  "kind": "agent",
+  "title": "Redesign layout with professional dashboard style",
+  "io": {
+    "inputJsonPath": "tasks/01KH08VZAAYMB1XQG1V978VJPW/input.json",
+    "outputJsonPath": "tasks/01KH08VZAAYMB1XQG1V978VJPW/result.json"
+  },
+  "inputs": {}
+}

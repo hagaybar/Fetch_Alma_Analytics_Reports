@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "compiles": true,
+  "issues": [],
+  "improvements": [
+    "Build completed successfully in 1.56s",
+    "TypeScript check passed with no errors",
+    "CSS bundle: 21.77 kB",
+    "JS bundle: 300.19 kB"
+  ]
+}

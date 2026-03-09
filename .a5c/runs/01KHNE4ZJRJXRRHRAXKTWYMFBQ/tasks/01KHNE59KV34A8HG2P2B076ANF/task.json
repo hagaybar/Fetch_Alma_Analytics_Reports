@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNE59KV34A8HG2P2B076ANF",
+  "taskId": "design-system-setup",
+  "invocationKey": "ui-redesign:S000001:design-system-setup",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Setup Design System Foundation",
+  "description": "Update Tailwind config, CSS variables, and font imports",
+  "io": {
+    "inputJsonPath": "tasks/01KHNE59KV34A8HG2P2B076ANF/input.json",
+    "outputJsonPath": "tasks/01KHNE59KV34A8HG2P2B076ANF/result.json"
+  },
+  "inputs": {
+    "designExamples": {
+      "editBox": "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/new_ui_examples/edit_box_example_code.html",
+      "editBoxImage": "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/new_ui_examples/edit_box_example.png",
+      "mainScreen": "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/new_ui_examples/main_screen_example_code.html",
+      "mainScreenImage": "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/new_ui_examples/main_screen_example.png"
+    },
+    "theme": {
+      "borderRadius": "12px",
+      "colors": {
+        "backgroundDark": "#111827",
+        "backgroundLight": "#F9FAFB",
+        "primary": "#4F46E5"
+      },
+      "fonts": [
+        "Inter"
+      ]
+    }
+  }
+}

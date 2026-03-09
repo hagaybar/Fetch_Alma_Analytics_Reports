@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHNFSR9AT9MZAH0RENT728N5",
+  "taskId": "build-check",
+  "invocationKey": "ui-redesign:S000012:build-check",
+  "status": "ok",
+  "result": {
+    "artifacts": {
+      "css": "dist/assets/index-zWDxAF_S.css (31.01 kB)",
+      "html": "dist/index.html (0.90 kB)",
+      "js": "dist/assets/index-c43UjFEq.js (303.42 kB)"
+    },
+    "buildOutput": "Build completed successfully in 1.58s",
+    "success": true
+  },
+  "startedAt": "2026-02-17T09:45:00.166Z",
+  "finishedAt": "2026-02-17T09:45:00.166Z",
+  "value": {
+    "artifacts": {
+      "css": "dist/assets/index-zWDxAF_S.css (31.01 kB)",
+      "html": "dist/index.html (0.90 kB)",
+      "js": "dist/assets/index-c43UjFEq.js (303.42 kB)"
+    },
+    "buildOutput": "Build completed successfully in 1.58s",
+    "success": true
+  }
+}

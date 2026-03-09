@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHKMJE3CWQA3QYWGGRSG8RTX",
+  "taskId": "update-cli-script",
+  "invocationKey": "batch-scheduling-feature:S000004:update-cli-script",
+  "stepId": "S000004",
+  "kind": "agent",
+  "title": "Update CLI script for batch execution",
+  "description": "Add --report-type flag and batch execution logic",
+  "labels": [
+    "cli",
+    "python"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KHKMJE3CWQA3QYWGGRSG8RTX/input.json",
+    "outputJsonPath": "tasks/01KHKMJE3CWQA3QYWGGRSG8RTX/result.json"
+  },
+  "inputs": {
+    "cliFile": "fetch_reports_from_alma_analytics.py",
+    "continueOnError": true
+  }
+}

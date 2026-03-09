@@ -1,0 +1,20 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T13:33:13.722Z",
+  "data": {
+    "effectId": "01KHNWW53EX7RZ1DPS6DN000KW",
+    "invocationKey": "add-active-filter-feature:S000004:verify-frontend",
+    "invocationHash": "945ec5519ad14598091dd68a7ea3615f6455f0c3fc42aa1b79ef2469b6068c28",
+    "stepId": "S000004",
+    "taskId": "verify-frontend",
+    "kind": "agent",
+    "label": "agent",
+    "taskDefRef": "tasks/01KHNWW53EX7RZ1DPS6DN000KW/task.json",
+    "labels": [
+      "agent",
+      "frontend",
+      "verification"
+    ]
+  },
+  "checksum": "7db98ccff9a8c2a2e3790b68debd78b18210f8f1f2e912b602658447987dcb7a"
+}

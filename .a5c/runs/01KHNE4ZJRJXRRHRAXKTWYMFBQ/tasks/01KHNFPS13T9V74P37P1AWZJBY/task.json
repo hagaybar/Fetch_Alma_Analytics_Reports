@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNFPS13T9V74P37P1AWZJBY",
+  "taskId": "visual-verification",
+  "invocationKey": "ui-redesign:S000011:visual-verification",
+  "stepId": "S000011",
+  "kind": "agent",
+  "title": "Visual Verification (Iteration 1)",
+  "description": "Verify visual appearance using browser",
+  "io": {
+    "inputJsonPath": "tasks/01KHNFPS13T9V74P37P1AWZJBY/input.json",
+    "outputJsonPath": "tasks/01KHNFPS13T9V74P37P1AWZJBY/result.json"
+  },
+  "inputs": {
+    "checkPoints": [
+      "sidebar",
+      "task-cards",
+      "task-form-modal",
+      "header"
+    ],
+    "iteration": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHNE80SW8X34DDHQXYDGF8AY",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-redesign:S000002:__sdk.breakpoint",
+  "status": "ok",
+  "result": {
+    "approved": true,
+    "response": "User approved foundation setup. Continue to Phase 2."
+  },
+  "startedAt": "2026-02-17T09:26:12.299Z",
+  "finishedAt": "2026-02-17T09:26:12.299Z",
+  "value": {
+    "approved": true,
+    "response": "User approved foundation setup. Continue to Phase 2."
+  }
+}

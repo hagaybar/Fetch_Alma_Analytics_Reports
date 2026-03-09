@@ -1,0 +1,18 @@
+{
+  "dailyReports": [
+    "aas_loans",
+    "aas_course_reserves"
+  ],
+  "weeklyReports": [
+    "aas_titles",
+    "collection_name_for_ckb",
+    "e_titles_for_usage",
+    "aac_rialto_invoices",
+    "users_openathens",
+    "inventory_usage_with_pol_collections",
+    "inventory_usage_with_pol_titles",
+    "funds_of_polines",
+    "AAM_titles"
+  ],
+  "continueOnError": true
+}

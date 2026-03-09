@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHKMG1GE1BZB1TMWFYEXXBHG",
+  "taskId": "update-reports-config",
+  "invocationKey": "batch-scheduling-feature:S000003:update-reports-config",
+  "stepId": "S000003",
+  "kind": "agent",
+  "title": "Update reports config JSON",
+  "description": "Add FREQUENCY field to each report in config",
+  "labels": [
+    "config",
+    "json"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KHKMG1GE1BZB1TMWFYEXXBHG/input.json",
+    "outputJsonPath": "tasks/01KHKMG1GE1BZB1TMWFYEXXBHG/result.json"
+  },
+  "inputs": {
+    "configFile": "reports_config.json",
+    "dailyReports": [
+      "aas_loans",
+      "aas_course_reserves"
+    ],
+    "weeklyReports": [
+      "aas_titles",
+      "collection_name_for_ckb",
+      "e_titles_for_usage",
+      "aac_rialto_invoices",
+      "users_openathens",
+      "inventory_usage_with_pol_collections",
+      "inventory_usage_with_pol_titles",
+      "funds_of_polines",
+      "AAM_titles"
+    ]
+  }
+}

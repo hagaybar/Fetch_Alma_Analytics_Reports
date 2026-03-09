@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KH08VZAWTB9D85TQ0JF2JGNN",
+  "taskId": "redesign-cards",
+  "invocationKey": "ui-redesign:S000005:redesign-cards",
+  "stepId": "S000005",
+  "kind": "agent",
+  "title": "Redesign card components",
+  "io": {
+    "inputJsonPath": "tasks/01KH08VZAWTB9D85TQ0JF2JGNN/input.json",
+    "outputJsonPath": "tasks/01KH08VZAWTB9D85TQ0JF2JGNN/result.json"
+  },
+  "inputs": {}
+}

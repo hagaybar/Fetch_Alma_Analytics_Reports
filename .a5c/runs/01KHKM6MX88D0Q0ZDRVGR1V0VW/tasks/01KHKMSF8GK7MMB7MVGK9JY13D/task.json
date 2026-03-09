@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHKMSF8GK7MMB7MVGK9JY13D",
+  "taskId": "verify-implementation",
+  "invocationKey": "batch-scheduling-feature:S000006:verify-implementation",
+  "stepId": "S000006",
+  "kind": "agent",
+  "title": "Verify implementation",
+  "description": "Check all changes are correct and consistent",
+  "labels": [
+    "qa",
+    "verification"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KHKMSF8GK7MMB7MVGK9JY13D/input.json",
+    "outputJsonPath": "tasks/01KHKMSF8GK7MMB7MVGK9JY13D/result.json"
+  },
+  "inputs": {
+    "dailyReports": [
+      "aas_loans",
+      "aas_course_reserves"
+    ],
+    "filesToCheck": [
+      "backend/models/task.py",
+      "backend/core/config_manager.py",
+      "reports_config.json",
+      "fetch_reports_from_alma_analytics.py"
+    ],
+    "weeklyReports": [
+      "aas_titles",
+      "collection_name_for_ckb",
+      "e_titles_for_usage",
+      "aac_rialto_invoices",
+      "users_openathens",
+      "inventory_usage_with_pol_collections",
+      "inventory_usage_with_pol_titles",
+      "funds_of_polines",
+      "AAM_titles"
+    ]
+  }
+}

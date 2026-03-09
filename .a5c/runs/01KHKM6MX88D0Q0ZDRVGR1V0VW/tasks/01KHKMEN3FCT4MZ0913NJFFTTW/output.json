@@ -1,0 +1,1 @@
+{"success":true,"changes":"Updated config_manager.py to handle the frequency field: Modified _task_from_dict to read FREQUENCY with daily default, and _task_to_dict to write frequency as FREQUENCY","filesModified":["/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/backend/core/config_manager.py"]}

@@ -1,0 +1,13 @@
+{
+  "runId": "01KHKM6MX88D0Q0ZDRVGR1V0VW",
+  "request": "batch-scheduling-feature",
+  "processId": "batch-scheduling-feature",
+  "entrypoint": {
+    "importPath": "../../processes/batch-scheduling-feature.js",
+    "exportName": "process"
+  },
+  "processPath": "../../processes/batch-scheduling-feature.js",
+  "layoutVersion": "2026.01-storage-preview",
+  "createdAt": "2026-02-16T16:23:11.537Z",
+  "completionSecret": "ba67a0796702a2f3349d472975953f02"
+}

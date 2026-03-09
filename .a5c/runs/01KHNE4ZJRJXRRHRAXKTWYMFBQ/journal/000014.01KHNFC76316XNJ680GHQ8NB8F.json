@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-17T09:37:20.067Z",
+  "data": {
+    "effectId": "01KHNFC75QC3ZEXNGWP5ND8XEB",
+    "invocationKey": "ui-redesign:S000007:feature-components",
+    "invocationHash": "1dd0a79f1755b33bf2f7a3642a50826325ed89e51b6eca0f8c0cf66bcbac9411",
+    "stepId": "S000007",
+    "taskId": "feature-components",
+    "kind": "agent",
+    "label": "Update Feature Components",
+    "taskDefRef": "tasks/01KHNFC75QC3ZEXNGWP5ND8XEB/task.json"
+  },
+  "checksum": "c959af190e2bade236ba186829851c432656089fec871f93a7927533d6b9ce03"
+}

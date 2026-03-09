@@ -1,0 +1,15 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-09T04:01:35.749Z",
+  "data": {
+    "effectId": "01KH08ZPZSABE0RH545MGHC8AS",
+    "invocationKey": "ui-redesign:S000007:verify-ui",
+    "invocationHash": "5e5db2164f4a5c07d0924aff170e38009d6263675b1e5ceac03fd662ca79ee7d",
+    "stepId": "S000007",
+    "taskId": "verify-ui",
+    "kind": "agent",
+    "label": "Verify UI changes work correctly",
+    "taskDefRef": "tasks/01KH08ZPZSABE0RH545MGHC8AS/task.json"
+  },
+  "checksum": "a83cda189b7be72860c5cbfe26cc733c53d19af44a16f126148739d714325995"
+}

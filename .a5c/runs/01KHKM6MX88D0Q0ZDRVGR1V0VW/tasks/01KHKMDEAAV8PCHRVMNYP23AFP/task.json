@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHKMDEAAV8PCHRVMNYP23AFP",
+  "taskId": "update-pydantic-model",
+  "invocationKey": "batch-scheduling-feature:S000001:update-pydantic-model",
+  "stepId": "S000001",
+  "kind": "agent",
+  "title": "Update Pydantic task model",
+  "description": "Add frequency field to TaskBase model",
+  "labels": [
+    "backend",
+    "model"
+  ],
+  "io": {
+    "inputJsonPath": "tasks/01KHKMDEAAV8PCHRVMNYP23AFP/input.json",
+    "outputJsonPath": "tasks/01KHKMDEAAV8PCHRVMNYP23AFP/result.json"
+  },
+  "inputs": {
+    "allowedValues": [
+      "daily",
+      "weekly"
+    ],
+    "defaultValue": "daily",
+    "fieldType": "str",
+    "modelFile": "backend/models/task.py",
+    "newField": "frequency"
+  }
+}

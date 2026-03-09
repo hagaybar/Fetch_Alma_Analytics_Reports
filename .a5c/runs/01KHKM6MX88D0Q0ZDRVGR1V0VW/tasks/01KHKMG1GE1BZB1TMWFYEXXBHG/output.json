@@ -1,0 +1,1 @@
+{"success":true,"changes":"Added FREQUENCY field to all 11 reports in reports_config.json. Daily reports (aas_loans, aas_course_reserves) received daily. Weekly reports received weekly.","reportsUpdated":11}

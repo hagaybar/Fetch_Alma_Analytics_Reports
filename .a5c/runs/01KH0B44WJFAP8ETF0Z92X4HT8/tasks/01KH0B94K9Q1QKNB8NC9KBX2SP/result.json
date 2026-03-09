@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KH0B94K9Q1QKNB8NC9KBX2SP",
+  "taskId": "redesign-cards",
+  "invocationKey": "ui-theme-redesign:S000003:redesign-cards",
+  "status": "ok",
+  "result": {
+    "changes": "Card rounded-2xl, shadow-sm. TaskCard larger title, more spacing, prominent Run button. TaskList gap-8, max 2 columns.",
+    "success": true
+  },
+  "startedAt": "2026-02-09T04:42:31.882Z",
+  "finishedAt": "2026-02-09T04:42:31.882Z",
+  "value": {
+    "changes": "Card rounded-2xl, shadow-sm. TaskCard larger title, more spacing, prominent Run button. TaskList gap-8, max 2 columns.",
+    "success": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026.01.results-v1",
+  "effectId": "01KHKMDEAAV8PCHRVMNYP23AFP",
+  "taskId": "update-pydantic-model",
+  "invocationKey": "batch-scheduling-feature:S000001:update-pydantic-model",
+  "status": "ok",
+  "result": {
+    "changes": "Added 'Literal' to the typing imports and added a new 'frequency' field of type Optional[Literal[\"daily\", \"weekly\"]] with default value \"daily\" to the TaskBase class. This field is optional to maintain backward compatibility with existing tasks.",
+    "filesModified": [
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/backend/models/task.py"
+    ],
+    "success": true
+  },
+  "startedAt": "2026-02-16T16:27:30.131Z",
+  "finishedAt": "2026-02-16T16:27:30.131Z",
+  "value": {
+    "changes": "Added 'Literal' to the typing imports and added a new 'frequency' field of type Optional[Literal[\"daily\", \"weekly\"]] with default value \"daily\" to the TaskBase class. This field is optional to maintain backward compatibility with existing tasks.",
+    "filesModified": [
+      "/home/hagaybar/projects/Fetch_Alma_Analytics_Reports/backend/models/task.py"
+    ],
+    "success": true
+  }
+}

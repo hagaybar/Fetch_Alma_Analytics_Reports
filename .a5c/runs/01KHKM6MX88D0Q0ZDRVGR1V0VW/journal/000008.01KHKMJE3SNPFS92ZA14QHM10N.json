@@ -1,0 +1,19 @@
+{
+  "type": "EFFECT_REQUESTED",
+  "recordedAt": "2026-02-16T16:29:37.785Z",
+  "data": {
+    "effectId": "01KHKMJE3CWQA3QYWGGRSG8RTX",
+    "invocationKey": "batch-scheduling-feature:S000004:update-cli-script",
+    "invocationHash": "4fbbdd8d9145fa51fb81cd28c020be1ce2aafd4a674735bf3c555044d36a2f63",
+    "stepId": "S000004",
+    "taskId": "update-cli-script",
+    "kind": "agent",
+    "label": "cli",
+    "taskDefRef": "tasks/01KHKMJE3CWQA3QYWGGRSG8RTX/task.json",
+    "labels": [
+      "cli",
+      "python"
+    ]
+  },
+  "checksum": "f532e5b8d3264684b5fc27ab1c9439fa1a9d1d4a371080807c777c0340f4ebf1"
+}

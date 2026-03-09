@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "2026.01.tasks-v1",
+  "effectId": "01KHNFH4P68YEK8A4TK40XWZ0Q",
+  "taskId": "__sdk.breakpoint",
+  "invocationKey": "ui-redesign:S000008:__sdk.breakpoint",
+  "stepId": "S000008",
+  "kind": "breakpoint",
+  "title": "breakpoint",
+  "metadata": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "files": [
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/tasks/TaskCard.tsx"
+          },
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/tasks/TaskForm.tsx"
+          }
+        ]
+      },
+      "question": "Feature components updated (TaskCard, TaskForm, TaskList). Review and approve to continue?",
+      "title": "Phase 4: Feature Components Review"
+    },
+    "requestedAt": "2026-02-17T09:40:01.350Z"
+  },
+  "inputs": {
+    "label": "breakpoint",
+    "payload": {
+      "context": {
+        "files": [
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/tasks/TaskCard.tsx"
+          },
+          {
+            "format": "code",
+            "language": "typescript",
+            "path": "frontend/src/components/tasks/TaskForm.tsx"
+          }
+        ]
+      },
+      "question": "Feature components updated (TaskCard, TaskForm, TaskList). Review and approve to continue?",
+      "title": "Phase 4: Feature Components Review"
+    },
+    "requestedAt": "2026-02-17T09:40:01.350Z"
+  }
+}
