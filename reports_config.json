@@ -38,10 +38,11 @@
     "OUTPUT_FILE_NAME": "Collection Name for CKB.xlsx",
     "OUTPUT_FORMAT": "xlsx",
     "LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\collection_name_for_ckb",
-    "TEST_OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\tests",
-    "TEST_LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\tests",
     "TEST_ROW_LIMIT": 25,
-    "FREQUENCY": "weekly"
+    "FREQUENCY": "weekly",
+    "ACTIVE": false,
+    "TEST_OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\tests",
+    "TEST_LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\tests"
   },
   "e_titles_for_usage": {
     "ALMA_REPORT_PATH": "%2Fshared%2FTel%20Aviv%20University%2FReports%2FMasedet%2FAlma%20Inventory%20for%20usage",
@@ -60,10 +61,11 @@
     "OUTPUT_FILE_NAME": "aac_rialto_invoices.xlsx",
     "OUTPUT_FORMAT": "xlsx",
     "LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\aac_rialto_invoices",
-    "TEST_OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\tests",
-    "TEST_LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\tests",
     "TEST_ROW_LIMIT": 25,
-    "FREQUENCY": "weekly"
+    "FREQUENCY": "weekly",
+    "ACTIVE": false,
+    "TEST_OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\tests",
+    "TEST_LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\tests"
   },
   "users_openathens": {
     "ALMA_REPORT_PATH": "%2Fshared%2FTel%20Aviv%20University%2FReports%2FMasedet%2FUsers%20in%20Alma%20for%20OpenAthens",
@@ -71,10 +73,11 @@
     "OUTPUT_FILE_NAME": "Users_in_alma_for_OpenAthens.tsv",
     "OUTPUT_FORMAT": "tsv",
     "LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\users_openathens",
-    "TEST_OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\tests",
-    "TEST_LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\tests",
     "TEST_ROW_LIMIT": 25,
-    "FREQUENCY": "weekly"
+    "FREQUENCY": "weekly",
+    "ACTIVE": false,
+    "TEST_OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\tests",
+    "TEST_LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\tests"
   },
   "inventory_usage_with_pol_collections": {
     "ALMA_REPORT_PATH": "%2Fshared%2FTel%20Aviv%20University%2FReports%2FMasedet%2FAlma%20Inventory%20for%20usage%20with%20POL%20Collections",
@@ -117,5 +120,15 @@
     "LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\AAM_titles",
     "TEST_ROW_LIMIT": 25,
     "FREQUENCY": "weekly"
+  },
+  "AAM ELEC": {
+    "ALMA_REPORT_PATH": "%2Fshared%2FTel%20Aviv%20University%2FReports%2FMasedet%2FAAM%20Elec",
+    "OUTPUT_PATH": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\Alma\\Titles",
+    "OUTPUT_FILE_NAME": "AAM_ELEC.xlsx",
+    "OUTPUT_FORMAT": "xlsx",
+    "LOG_DIR": "D:\\Tel-Aviv University\\masedet - Documents\\Data\\LOGS\\Analytics_logs\\AAM_ELEC",
+    "TEST_ROW_LIMIT": 25,
+    "FREQUENCY": "weekly",
+    "ACTIVE": true
   }
 }
