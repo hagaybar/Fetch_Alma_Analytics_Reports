@@ -333,3 +333,6 @@ logs/
 # Temporary files
 temp/
 tmp/
+
+# Local dev-only config
+reports_config.dev.json
