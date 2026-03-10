@@ -243,3 +243,5 @@ cd frontend && npx tsc --noEmit
 This project is open-source and licensed under the MIT License.
 
 Created and maintained by the TAU Development Team – Tel Aviv University Libraries
+
+Maintained by hagaybar@tauex.tau.ac.il
